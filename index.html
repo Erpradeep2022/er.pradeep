@@ -1,209 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Pradeep Kumar Mohanty | PhD Research Scholar</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<title>Er. Pradeep Kumar Mohanty | PhD Scholar</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: "Roboto", Arial, sans-serif;
-      background-color: #f5f5f5;
-      color: #222;
-      line-height: 1.7;
-    }
+<style>
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+}
 
-    /* Header */
-    header {
-      background: #1a73e8;
-      color: white;
-      padding: 50px 20px;
-      text-align: center;
-    }
+/* Layout */
+.container {
+    display: flex;
+}
 
-    header h1 {
-      margin: 0;
-      font-size: 2.4em;
-      font-weight: 500;
-    }
+/* Sidebar */
+.sidebar {
+    width: 260px;
+    background: #8b0000;
+    color: white;
+    min-height: 100vh;
+    position: fixed;
+    padding: 30px 20px;
+}
 
-    header p {
-      margin-top: 10px;
-      font-size: 1.15em;
-    }
+.sidebar h2 {
+    font-size: 1.4em;
+    margin-bottom: 30px;
+}
 
-    /* Main container */
-    main {
-      max-width: 1100px;
-      margin: auto;
-      background: white;
-      padding: 40px 25px;
-    }
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin: 12px 0;
+    font-size: 0.95em;
+}
 
-    section {
-      margin-bottom: 45px;
-    }
+.sidebar a:hover {
+    text-decoration: underline;
+}
 
-    h2 {
-      color: #1a73e8;
-      font-size: 1.6em;
-      margin-bottom: 15px;
-      border-bottom: 2px solid #e0e0e0;
-      padding-bottom: 5px;
-    }
+/* Main */
+.main {
+    margin-left: 260px;
+    width: calc(100% - 260px);
+}
 
-    ul {
-      padding-left: 22px;
-    }
+/* Hero */
+.hero {
+    background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
+    url("https://images.unsplash.com/photo-1581092160607-ee22621dd758") center/cover;
+    color: white;
+    padding: 70px 40px;
+}
 
-    li {
-      margin-bottom: 8px;
-    }
+.hero h1 {
+    font-size: 2.4em;
+    margin-bottom: 10px;
+}
 
-    .two-col {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 30px;
-    }
+.hero p {
+    color: #ffcc80;
+    font-size: 1.05em;
+}
 
-    .card {
-      background: #fafafa;
-      padding: 20px;
-      border-left: 4px solid #1a73e8;
-    }
+/* Content */
+.content {
+    background: white;
+    padding: 40px;
+}
 
-    a {
-      color: #1a73e8;
-      text-decoration: none;
-    }
+.section {
+    margin-bottom: 50px;
+}
 
-    footer {
-      background: #1a73e8;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9em;
-    }
+.section h2 {
+    color: #8b0000;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 6px;
+}
 
-    @media (max-width: 800px) {
-      .two-col {
-        grid-template-columns: 1fr;
-      }
+/* Profile */
+.profile {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.profile img {
+    width: 220px;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.2);
+}
+
+.info p {
+    margin: 6px 0;
+}
+
+.quote {
+    color: green;
+    font-style: italic;
+    margin-top: 20px;
+}
+
+/* Responsive */
+@media(max-width:900px){
+    .sidebar {
+        position: relative;
+        width: 100%;
+        min-height: auto;
     }
-  </style>
+    .main {
+        margin-left: 0;
+        width: 100%;
+    }
+    .profile {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+</style>
 </head>
+
 <body>
 
-<header>
-  <h1>Pradeep Kumar Mohanty</h1>
-  <p>Ph.D. Research Scholar | VLSI Design & Hardware Security</p>
-  <p>National Institute of Technology, Rourkela</p>
-</header>
+<div class="container">
 
-<main>
+<!-- SIDEBAR -->
+<div class="sidebar">
+    <h2>Er. P K Mohanty<br><small>PhD Scholar</small></h2>
+    <a href="#home">Home</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#research">Research</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Technical Skills</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#publications">Publications</a>
+    <a href="#contact">Contact</a>
+</div>
 
-<section>
-  <h2>About</h2>
-  <p>
-    I am a Ph.D. Research Scholar at NIT Rourkela under the C2S program. My research focuses on the
-    design and development of Trusted Platform Modules (TPM) for securing Industrial IoT Gateways.
-    I work on cryptographic hardware, secure ASIC design, and FPGA-based implementations.
-  </p>
+<!-- MAIN -->
+<div class="main">
+
+<section class="hero" id="home">
+    <h1>Er. Pradeep Kumar Mohanty</h1>
+    <p>Ph.D. | Research Scholar | VLSI Design & Cryptographic Hardware | Industrial IoT Security (TPM) | C2S Program</p>
 </section>
 
-<section>
-  <h2>Research Interests</h2>
-  <ul>
-    <li>Hardware Security & Cryptography</li>
-    <li>ASIC and FPGA Design</li>
-    <li>Lightweight Cryptographic Algorithms (ASCON)</li>
-    <li>Secure Industrial IoT Systems</li>
-    <li>Low-Power and Energy-Efficient VLSI</li>
-  </ul>
-</section>
+<div class="content">
 
-<section>
-  <h2>Education</h2>
-  <ul>
-    <li><strong>Ph.D. (Pursuing)</strong>, NIT Rourkela – Secure TPM for Industrial IoT (2025–Present)</li>
-    <li><strong>B.Tech</strong>, Electronics & Telecommunication, PMEC Berhampur – CGPA 8.61</li>
-    <li><strong>Intermediate</strong>, Science – Aska Science College</li>
-  </ul>
-</section>
+<section class="section">
+<div class="profile">
+    <img src="photo.jpg" alt="Pradeep Kumar Mohanty">
+    <div class="info">
+        <p><strong>Email:</strong> er.pkmohanty2022@gmail.com</p>
+        <p><strong>Phone:</strong> +91 9668147292</p>
+        <p><strong>Location:</strong> Rourkela, Odisha – 769008</p>
+        <p><strong>Languages:</strong> English, Hindi, Odia</p>
 
-<section>
-  <h2>Publications</h2>
-  <ul>
-    <li>High-Efficiency FPGA Implementations of ASCON-128/128A – IEEE iSES (Accepted)</li>
-    <li>ASIC Implementation of KDF-based ASCON AEAD Accelerator – VLSID 2026 (Under Review)</li>
-    <li>Rectangular Microstrip Patch Antenna for Wi-Fi Applications – Kronika Journal</li>
-    <li>Energy-Efficient Approximate Multiplier Design – MNDCS Conference</li>
-  </ul>
-</section>
-
-<section>
-  <h2>Projects</h2>
-  <div class="two-col">
-    <div class="card">
-      <ul>
-        <li>FIFO-enabled ASCON ASIC (SCL 180nm)</li>
-        <li>Energy-Efficient Approximate Multiplier (Fabricated)</li>
-        <li>ASIC Up-Counter (RTL to GDS-II)</li>
-      </ul>
+        <div class="quote">
+            “Mistakes are proof that you are trying.” <br>— Jennifer Lim
+        </div>
     </div>
-    <div class="card">
-      <ul>
-        <li>Face Detection using PYNQ-Z2 FPGA</li>
-        <li>Microstrip Patch Antenna using Ansys HFSS</li>
-        <li>Seven-Segment Display using Verilog</li>
-      </ul>
-    </div>
-  </div>
+</div>
 </section>
 
-<section>
-  <h2>Technical Skills</h2>
-  <div class="two-col">
-    <ul>
-      <li>Verilog HDL, TCL Scripting</li>
-      <li>RTL Design & Verification</li>
-      <li>ASIC Design Flow</li>
-      <li>FPGA Implementation</li>
-    </ul>
-    <ul>
-      <li>Cadence Virtuoso, Innovus</li>
-      <li>Synopsys VCS, Design Compiler</li>
-      <li>Calibre (DRC/LVS)</li>
-      <li>SCL 180nm, TSMC Nodes</li>
-    </ul>
-  </div>
+<section class="section" id="experience">
+<h2>Experience</h2>
+<ul>
+<li><strong>Ph.D. Research Scholar</strong>, NIT Rourkela (2025–Present)</li>
+<li><strong>Project Assistant</strong>, PMEC Berhampur (2023–2024)</li>
+</ul>
 </section>
 
-<section>
-  <h2>Achievements & Certifications</h2>
-  <ul>
-    <li>ASIC Chip Tape-Out – Semicon India 2025</li>
-    <li>Student Fellow – IEEE ITC India & VDAT</li>
-    <li>GATE 2024 – AIR 7458</li>
-    <li>IEP Programs at CDAC Bangalore & IIT Indore</li>
-  </ul>
+<section class="section" id="education">
+<h2>Education</h2>
+<ul>
+<li>Ph.D., NIT Rourkela (Pursuing)</li>
+<li>B.Tech, E&TC, PMEC Berhampur – CGPA 8.61</li>
+</ul>
 </section>
 
-<section>
-  <h2>Contact</h2>
-  <p>
-    📧 Email: er.pkmohanty2022@gmail.com <br>
-    📍 Rourkela, Odisha, India <br>
-    🔗 GitHub: <a href="https://github.com/Erpradeep2022">github.com/Erpradeep2022</a>
-  </p>
+<section class="section" id="research">
+<h2>Research Interests</h2>
+<ul>
+<li>Hardware Security & Cryptography</li>
+<li>ASIC & FPGA Design</li>
+<li>Lightweight Cryptography (ASCON)</li>
+<li>Secure Industrial IoT Systems</li>
+</ul>
 </section>
 
-</main>
+<section class="section" id="projects">
+<h2>Projects</h2>
+<ul>
+<li>FIFO-enabled ASCON ASIC (SCL 180nm)</li>
+<li>Energy-Efficient Approximate Multiplier (Fabricated)</li>
+<li>Face Detection using PYNQ-Z2 FPGA</li>
+</ul>
+</section>
 
-<footer>
-  © 2026 Pradeep Kumar Mohanty | Academic Personal Website
-</footer>
+<section class="section" id="skills">
+<h2>Technical Skills</h2>
+<ul>
+<li>Verilog, TCL, RTL Design</li>
+<li>Cadence Virtuoso, Innovus</li>
+<li>Synopsys VCS, Design Compiler</li>
+<li>Calibre DRC/LVS</li>
+</ul>
+</section>
+
+<section class="section" id="achievements">
+<h2>Achievements</h2>
+<ul>
+<li>ASIC Chip Tape-Out – Semicon India 2025</li>
+<li>IEEE Student Fellow (VDAT, ITC)</li>
+<li>GATE 2024 – AIR 7458</li>
+</ul>
+</section>
+
+<section class="section" id="publications">
+<h2>Publications</h2>
+<ul>
+<li>FPGA Implementation of ASCON – IEEE iSES (Accepted)</li>
+<li>ASIC KDF-based ASCON – VLSID 2026 (Under Review)</li>
+</ul>
+</section>
+
+<section class="section" id="contact">
+<h2>Contact</h2>
+<p>Email: er.pkmohanty2022@gmail.com</p>
+<p>GitHub: https://github.com/Erpradeep2022</p>
+</section>
+
+</div>
+</div>
+</div>
 
 </body>
 </html>
