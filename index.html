@@ -1,323 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Er. Pradeep Kumar Mohanty | PhD Research Scholar</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Er. Pradeep Kumar Mohanty | PhD Research Scholar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a2a6c;
+            --secondary: #b21f1f;
+            --accent: #fdbb2d;
+            --text: #333;
+            --bg: #f8f9fa;
+            --white: #ffffff;
+        }
 
-<style>
-html { scroll-behavior: smooth; }
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            display: flex;
+            line-height: 1.6;
+        }
 
-body {
-  margin: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: #f2f2f2;
-  color: #222;
-  line-height: 1.75;
-}
+        /* Sidebar Navigation */
+        nav {
+            width: 260px;
+            height: 100vh;
+            background: var(--primary);
+            color: white;
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            padding: 40px 20px;
+            transition: all 0.3s;
+        }
 
-/* ================= NAVIGATION ================= */
-nav {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: #1f1f3d;
-  padding: 14px 0;
-  text-align: center;
-}
+        .nav-brand {
+            font-weight: 700;
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+            color: var(--accent);
+            line-height: 1.2;
+        }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 14px;
-  font-size: 0.95em;
-}
+        nav a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            padding: 12px 0;
+            font-weight: 400;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            transition: 0.3s;
+        }
 
-nav a:hover {
-  border-bottom: 2px solid #ffd27d;
-  padding-bottom: 4px;
-}
+        nav a:hover {
+            color: var(--accent);
+            padding-left: 8px;
+        }
 
-/* ================= HERO ================= */
-.hero {
-  background: linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)),
-              url("hero.jpg") center/cover;
-  color: white;
-  padding: 130px 20px;
-  text-align: center;
-}
+        /* Main Content */
+        main {
+            margin-left: 260px;
+            width: calc(100% - 260px);
+            padding: 0;
+        }
 
-.hero h1 {
-  font-size: 3em;
-  margin-bottom: 12px;
-  font-weight: 500;
-}
+        section {
+            padding: 80px 10%;
+            min-height: auto;
+        }
 
-.hero p {
-  color: #ffcc80;
-  font-size: 1.1em;
-}
+        .hero {
+            background: linear-gradient(135deg, var(--primary), #121a3a);
+            color: white;
+            padding: 120px 10%;
+            text-align: left;
+        }
 
-/* ================= MAIN ================= */
-main {
-  max-width: 1100px;
-  margin: auto;
-  background: white;
-  padding: 60px;
-}
+        .hero h1 { font-size: 3.5rem; margin: 0; }
+        .hero p { font-size: 1.2rem; color: #ccc; margin-top: 10px; }
 
-/* ================= ACCORDION ================= */
-details {
-  margin-bottom: 22px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  background: #fafafa;
-  padding: 18px 22px;
-}
+        h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            border-bottom: 3px solid var(--accent);
+            display: inline-block;
+            margin-bottom: 40px;
+        }
 
-summary {
-  font-size: 1.35em;
-  font-weight: 600;
-  color: #1f1f3d;
-  cursor: pointer;
-  list-style: none;
-}
+        .card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+        }
 
-summary::-webkit-details-marker {
-  display: none;
-}
+        .profile-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            align-items: start;
+        }
 
-details[open] {
-  background: #ffffff;
-  border-left: 6px solid #1f1f3d;
-}
+        .profile-img {
+            width: 100%;
+            border-radius: 12px;
+            border: 5px solid white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
 
-/* ================= CONTENT ================= */
-ul {
-  padding-left: 22px;
-}
+        ul { list-style: none; padding: 0; }
+        li { margin-bottom: 15px; padding-left: 20px; position: relative; }
+        li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+            font-weight: bold;
+        }
 
-li {
-  margin-bottom: 10px;
-}
+        .tag {
+            background: #eee;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            display: inline-block;
+            margin: 5px;
+            color: var(--primary);
+        }
 
-/* ================= PROFILE ================= */
-.profile {
-  display: flex;
-  gap: 40px;
-  align-items: center;
-}
+        footer {
+            background: #121a3a;
+            color: white;
+            text-align: center;
+            padding: 40px;
+        }
 
-.profile img {
-  width: 240px;
-  box-shadow: 0 8px 20px rgba(0,0,0,.2);
-  border-radius: 6px;
-}
-
-/* ================= FOOTER ================= */
-footer {
-  background: #1f1f3d;
-  color: white;
-  text-align: center;
-  padding: 25px;
-  font-size: 0.9em;
-}
-
-/* ================= RESPONSIVE ================= */
-@media(max-width: 900px) {
-  main { padding: 40px 25px; }
-  .profile {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-</style>
+        /* Mobile Responsive */
+        @media (max-width: 992px) {
+            nav { width: 100%; height: auto; position: relative; }
+            main { margin-left: 0; width: 100%; }
+            .profile-container { grid-template-columns: 1fr; text-align: center; }
+            .hero h1 { font-size: 2.5rem; }
+        }
+    </style>
 </head>
-
 <body>
 
-<!-- ================= NAV ================= -->
 <nav>
-  <a href="#home">Home</a>
-  <a href="#about">About</a>
-  <a href="#education">Education</a>
-  <a href="#experience">Experience</a>
-  <a href="#research">Research</a>
-  <a href="#projects">Projects</a>
-  <a href="#publications">Publications</a>
-  <a href="#contact">Contact</a>
+    <div class="nav-brand">Er. Pradeep Kumar Mohanty</div>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#research">Research</a>
+    <a href="#experience">Experience</a>
+    <a href="#publications">Publications</a>
+    <a href="#contact">Contact</a>
 </nav>
 
-<!-- ================= HERO ================= -->
-<section class="hero" id="home">
-  <h1>Er. Pradeep Kumar Mohanty</h1>
-  <p>
-    Ph.D. Research Scholar | VLSI Design & Cryptographic Hardware<br>
-    Industrial IoT Security (TPM) | C2S Program
-  </p>
-</section>
-
 <main>
+    <section class="hero" id="home">
+        <h1>Pradeep Kumar Mohanty</h1>
+        <p>Ph.D. Research Scholar | Hardware Security | VLSI Design</p>
+        <div style="margin-top: 20px;">
+            <span class="tag">Trusted Platform Module (TPM)</span>
+            <span class="tag">ASCON Cryptography</span>
+            <span class="tag">C2S Program</span>
+        </div>
+    </section>
 
-<!-- ================= ABOUT ================= -->
-<details id="about" open>
-  <summary>About Me</summary>
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="profile-container">
+            <img src="profile.jpg" alt="Pradeep Kumar Mohanty" class="profile-img">
+            <div>
+                <p>
+                    I am a doctoral researcher at the <strong>National Institute of Technology (NIT), Rourkela</strong>, 
+                    working under the prestigious <strong>Chips-to-Startup (C2S)</strong> initiative by MeitY.
+                </p>
+                <p>
+                    My research focuses on the design of secure architectures for Industrial IoT. I specialize in 
+                    <strong>ASIC/FPGA implementations</strong> of cryptographic algorithms like ASCON and the development 
+                    of <strong>Trusted Platform Modules (TPM)</strong> for edge security.
+                </p>
+                <div class="card">
+                    <strong>Education:</strong>
+                    <ul>
+                        <li><strong>Ph.D. (Electronics & Comm.)</strong> - NIT Rourkela (Ongoing)</li>
+                        <li><strong>B.Tech (ETC)</strong> - PMEC Berhampur (CGPA: 8.61)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <div class="profile">
-    <img src="photo.jpg" alt="Pradeep Kumar Mohanty">
+    <section id="research" style="background: #f1f3f5;">
+        <h2>Research Interests</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+            <div class="card">
+                <h3>Hardware Security</h3>
+                <p>Side-channel analysis, secure IC design, and physically unclonable functions (PUF).</p>
+            </div>
+            <div class="card">
+                <h3>VLSI Design</h3>
+                <p>RTL-to-GDSII flow, low-power optimization, and SCL 180nm technology node implementation.</p>
+            </div>
+            <div class="card">
+                <h3>IIoT Security</h3>
+                <p>Developing hardware-based roots of trust for industrial gateways and edge computing.</p>
+            </div>
+        </div>
+    </section>
 
-    <p>
-      I am a Ph.D. Research Scholar at the National Institute of Technology,
-      Rourkela under the Chips-to-Startup (C2S) program. My doctoral research
-      focuses on the design and development of <strong>Trusted Platform Modules (TPM)</strong>
-      for securing Industrial IoT gateways.
-      <br><br>
-      My academic interests lie at the intersection of <strong>hardware security,
-      cryptography, and VLSI system design</strong>. I work on developing secure,
-      energy-efficient ASIC and FPGA-based cryptographic accelerators that are
-      suitable for resource-constrained edge and industrial environments.
-    </p>
-  </div>
-</details>
+    <section id="experience">
+        <h2>Experience & Projects</h2>
+        <div class="card">
+            <h3>Project Assistant | MeitY Sponsored</h3>
+            <p>Contributed to ASIC design cycles using Cadence and Synopsys tools, focusing on RTL verification and physical design.</p>
+        </div>
+        <div class="card">
+            <h3>ASCON AEAD Accelerator</h3>
+            <p>Designed a FIFO-enabled lightweight cryptographic module for the SCL 180nm process, optimized for energy-constrained devices.</p>
+        </div>
+    </section>
 
-<!-- ================= EDUCATION ================= -->
-<details id="education">
-  <summary>Education</summary>
+    <section id="publications">
+        <h2>Select Publications</h2>
+        <div class="card">
+            <ul>
+                <li><strong>IEEE iSES 2025:</strong> High-Efficiency FPGA Implementations of ASCON-128/128A. (Accepted)</li>
+                <li><strong>VLSID 2026:</strong> ASIC Implementation of KDF-based ASCON AEAD Accelerator. (Under Review)</li>
+                <li><strong>MNDCS:</strong> Design and Analysis of Energy-Efficient Approximate Multipliers.</li>
+            </ul>
+        </div>
+    </section>
 
-  <ul>
-    <li>
-      <strong>Ph.D. (Pursuing)</strong> – National Institute of Technology, Rourkela  
-      <br>Research Area: Secure TPM design for Industrial IoT Gateways
-    </li>
-    <li>
-      <strong>B.Tech</strong> – Electronics & Telecommunication Engineering,  
-      Parala Maharaja Engineering College, Berhampur (CGPA: 8.61)
-    </li>
-    <li>
-      <strong>Intermediate in Science</strong> – Aska Science College
-    </li>
-  </ul>
-</details>
+    <section id="contact">
+        <h2>Get In Touch</h2>
+        <div class="card">
+            <p>📍 <strong>Location:</strong> NIT Rourkela, Odisha, India</p>
+            <p>📧 <strong>Email:</strong> er.pkmohanty2022@gmail.com</p>
+            <p>🔗 <strong>GitHub:</strong> <a href="https://github.com/Erpradeep2022" target="_blank">github.com/Erpradeep2022</a></p>
+        </div>
+    </section>
 
-<!-- ================= EXPERIENCE ================= -->
-<details id="experience">
-  <summary>Professional Experience</summary>
-
-  <ul>
-    <li>
-      <strong>Ph.D. Research Scholar</strong> (2025 – Present)  
-      <br>
-      Conducting research on cryptographic hardware architectures, secure ASIC
-      design, and TPM integration for industrial security applications.
-    </li>
-    <li>
-      <strong>Project Assistant</strong> (2023 – 2024)  
-      <br>
-      Worked on MeitY-sponsored ASIC design projects using Cadence, Synopsys, and
-      Xilinx toolchains. Contributed to RTL design, verification, and physical
-      implementation.
-    </li>
-  </ul>
-</details>
-
-<!-- ================= RESEARCH ================= -->
-<details id="research">
-  <summary>Research Interests</summary>
-
-  <ul>
-    <li>
-      <strong>Hardware Security:</strong> Secure cryptographic module design,
-      side-channel aware architectures, and trusted hardware roots.
-    </li>
-    <li>
-      <strong>Cryptographic Accelerators:</strong> Lightweight algorithms such
-      as ASCON optimized for ASIC and FPGA platforms.
-    </li>
-    <li>
-      <strong>ASIC & FPGA Design:</strong> RTL-to-GDSII flow, low-power and
-      energy-efficient VLSI design methodologies.
-    </li>
-    <li>
-      <strong>Industrial IoT Security:</strong> Secure gateway design using TPMs
-      and hardware-assisted trust mechanisms.
-    </li>
-  </ul>
-</details>
-
-<!-- ================= PROJECTS ================= -->
-<details id="projects">
-  <summary>Major Projects</summary>
-
-  <ul>
-    <li>
-      <strong>FIFO-enabled ASCON ASIC (SCL 180nm)</strong>  
-      <br>
-      Designed and implemented a lightweight authenticated encryption module
-      with FIFO interface, optimized for power, area, and timing.
-    </li>
-    <li>
-      <strong>Energy-Efficient Approximate Multiplier (ASIC)</strong>  
-      <br>
-      Proposed novel approximate arithmetic architectures to reduce power and
-      area, successfully fabricated at SCL Chandigarh.
-    </li>
-    <li>
-      <strong>Face Detection using FPGA</strong>  
-      <br>
-      Implemented MTCNN-based face detection on PYNQ-Z2 using Python and FPGA
-      acceleration.
-    </li>
-  </ul>
-</details>
-
-<!-- ================= PUBLICATIONS ================= -->
-<details id="publications">
-  <summary>Publications</summary>
-
-  <ul>
-    <li>
-      High-Efficiency FPGA Implementations of ASCON-128/128A – IEEE iSES (Accepted)
-    </li>
-    <li>
-      ASIC Implementation of KDF-based ASCON AEAD Accelerator – VLSID 2026 (Under Review)
-    </li>
-    <li>
-      Design and Analysis of Energy-Efficient Approximate Multiplier – MNDCS Conference
-    </li>
-  </ul>
-</details>
-
-<!-- ================= CONTACT ================= -->
-<details id="contact">
-  <summary>Contact Information</summary>
-
-  <p>
-    📧 <strong>Email:</strong> er.pkmohanty2022@gmail.com <br>
-    📍 <strong>Location:</strong> Rourkela, Odisha, India <br>
-    🔗 <strong>GitHub:</strong> https://github.com/Erpradeep2022
-  </p>
-</details>
-
+    <footer>
+        <p>&copy; 2026 Er. Pradeep Kumar Mohanty | Designed for Academic Excellence</p>
+    </footer>
 </main>
-
-<footer>
-  © 2026 Er. Pradeep Kumar Mohanty | Academic Personal Website
-</footer>
-
-<!-- ================= JS: ONE SECTION OPEN ================= -->
-<script>
-const details = document.querySelectorAll("details");
-
-details.forEach(d => {
-  d.addEventListener("toggle", () => {
-    if (d.open) {
-      details.forEach(other => {
-        if (other !== d) other.removeAttribute("open");
-      });
-    }
-  });
-});
-</script>
 
 </body>
 </html>
