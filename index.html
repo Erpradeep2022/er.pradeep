@@ -3,247 +3,197 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Er. Pradeep Kumar Mohanty | PhD Scholar & VLSI Engineer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Er. Pradeep Kumar Mohanty | Professional Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #0a192f;
-            --secondary: #172a45;
-            --accent: #64ffda;
-            --text-main: #e6f1ff;
-            --text-dim: #8892b0;
-            --bg: #0a192f;
-            --white: #ffffff;
+            --primary: #2c3e50;
+            --accent: #2980b9;
+            --bg: #ffffff;
+            --section-alt: #f8f9fa;
+            --text: #333333;
+            --text-light: #666666;
+            --border: #e0e0e0;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; }
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg);
-            color: var(--text-main);
-            line-height: 1.6;
-        }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.6; }
 
-        /* --- STICKY FORMAL NAV --- */
-        nav {
-            position: fixed;
-            top: 0; width: 100%;
-            background: rgba(10, 25, 47, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            padding: 20px 0;
-            border-bottom: 1px solid rgba(100, 255, 218, 0.1);
-        }
-
-        .nav-container {
-            max-width: 1100px; margin: auto;
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 0 40px;
-        }
-
-        .logo { font-weight: 700; color: var(--accent); font-size: 1.2rem; }
-        
-        .nav-links a {
-            text-decoration: none; color: var(--text-main);
-            margin-left: 25px; font-size: 0.85rem; font-weight: 400;
-            transition: 0.3s;
-        }
-
+        /* Navigation */
+        nav { position: fixed; top: 0; width: 100%; background: white; border-bottom: 1px solid var(--border); z-index: 1000; padding: 15px 0; }
+        .container { max-width: 1100px; margin: auto; padding: 0 30px; }
+        .nav-content { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Crimson Pro', serif; font-size: 1.4rem; font-weight: 700; color: var(--primary); }
+        .nav-links a { text-decoration: none; color: var(--text); margin-left: 20px; font-size: 0.9rem; font-weight: 500; }
         .nav-links a:hover { color: var(--accent); }
 
-        /* --- HERO SECTION --- */
-        header {
-            height: 90vh;
-            display: flex; align-items: center; justify-content: center;
-            text-align: center; padding: 0 20px;
-        }
+        /* Header */
+        header { padding: 150px 0 80px; background: var(--section-alt); text-align: center; border-bottom: 1px solid var(--border); }
+        .profile-img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 20px; border: 3px solid var(--accent); }
+        h1 { font-family: 'Crimson Pro', serif; font-size: 3rem; color: var(--primary); margin-bottom: 10px; }
+        .subtitle { font-size: 1.2rem; color: var(--accent); font-weight: 500; }
 
-        .hero-content h1 {
-            font-family: 'Crimson Pro', serif;
-            font-size: 4rem; margin-bottom: 10px;
-        }
+        /* Sections */
+        section { padding: 80px 0; border-bottom: 1px solid var(--border); }
+        .alt-bg { background: var(--section-alt); }
+        h2 { font-family: 'Crimson Pro', serif; font-size: 2.2rem; color: var(--primary); margin-bottom: 40px; position: relative; }
+        h2::after { content: ''; display: block; width: 50px; height: 3px; background: var(--accent); margin-top: 10px; }
 
-        .hero-content p {
-            font-size: 1.2rem; color: var(--accent);
-            font-weight: 400; letter-spacing: 2px; text-transform: uppercase;
-        }
+        /* Research & Project Cards */
+        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .card { background: white; padding: 30px; border: 1px solid var(--border); border-radius: 4px; transition: transform 0.2s; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .card h3 { color: var(--accent); margin-bottom: 15px; font-size: 1.25rem; }
+        .card p { font-size: 0.95rem; color: var(--text-light); }
+        .card ul { margin-top: 15px; list-style: square; padding-left: 20px; color: var(--text-light); font-size: 0.9rem; }
 
-        /* --- SECTION STRUCTURE --- */
-        section {
-            max-width: 1000px; margin: auto;
-            padding: 100px 40px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
+        /* Student Mentorship Section */
+        .mentorship-box { background: #eaf2f8; padding: 30px; border-radius: 8px; border-left: 5px solid var(--accent); }
+        .mentorship-box h4 { margin-bottom: 10px; font-size: 1.1rem; }
 
-        h2 {
-            font-family: 'Crimson Pro', serif;
-            font-size: 2.2rem; margin-bottom: 40px;
-            display: flex; align-items: center;
-        }
+        /* Footer */
+        footer { padding: 40px 0; text-align: center; font-size: 0.9rem; color: var(--text-light); }
+        .social-links a { color: var(--primary); text-decoration: none; margin: 0 15px; font-weight: 600; }
 
-        h2::after {
-            content: ""; display: block; height: 1px; width: 300px;
-            background: rgba(100, 255, 218, 0.2); margin-left: 20px;
-        }
-
-        /* --- CONTENT CARDS --- */
-        .info-card {
-            background: var(--secondary);
-            padding: 30px; border-radius: 4px;
-            margin-bottom: 20px;
-            transition: 0.3s;
-        }
-
-        .info-card:hover { transform: translateY(-5px); border-left: 4px solid var(--accent); }
-
-        .info-card h3 { color: var(--accent); font-size: 1.25rem; margin-bottom: 10px; }
-        .info-card h4 { font-size: 0.9rem; color: var(--text-dim); margin-bottom: 15px; }
-
-        .tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
-        .tag {
-            background: rgba(100, 255, 218, 0.1);
-            color: var(--accent); padding: 5px 12px;
-            font-size: 0.75rem; border-radius: 2px;
-        }
-
-        /* --- GRID FOR SKILLS --- */
-        .skills-grid {
-            display: grid; grid-template-columns: 1fr 1fr; gap: 40px;
-        }
-
-        ul { list-style: none; }
-        li::before { content: "▹ "; color: var(--accent); }
-        li { margin-bottom: 10px; color: var(--text-dim); }
-
-        /* --- FOOTER --- */
-        footer {
-            padding: 60px 0; text-align: center;
-            background: #020c1b; color: var(--text-dim); font-size: 0.8rem;
-        }
-
-        .social-icons a {
-            color: var(--text-main); font-size: 1.5rem; margin: 0 15px; text-decoration: none;
-        }
-
-        @media (max-width: 768px) {
-            .skills-grid { grid-template-columns: 1fr; }
-            .hero-content h1 { font-size: 2.5rem; }
-        }
+        @media (max-width: 768px) { h1 { font-size: 2.2rem; } .nav-links { display: none; } }
     </style>
 </head>
 <body>
 
     <nav>
-        <div class="nav-container">
-            <div class="logo">P.K. MOHANTY</div>
+        <div class="container nav-content">
+            <div class="logo">Er. Pradeep Kumar Mohanty</div>
             <div class="nav-links">
                 <a href="#about">About</a>
                 <a href="#research">Research</a>
-                <a href="#experience">Experience</a>
-                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#mentorship">Mentorship</a>
                 <a href="#contact">Contact</a>
             </div>
         </div>
     </nav>
 
     <header>
-        <div class="hero-content">
-            <p>PhD Research Scholar</p>
+        <div class="container">
+            <img src="photo.jpg" alt="Pradeep Kumar Mohanty" class="profile-img">
             <h1>Pradeep Kumar Mohanty</h1>
-            <p style="color: var(--text-dim); text-transform: none; font-size: 1.1rem; letter-spacing: 0;">VLSI Design | Hardware Security | NIT Rourkela</p>
+            <p class="subtitle">PhD Research Scholar | VLSI & Hardware Security</p>
+            <p style="margin-top: 10px; color: #666;">NIT Rourkela | AIR 7458 GATE 2024</p>
         </div>
     </header>
 
     <section id="about">
-        <h2>About Me</h2>
-        <p style="color: var(--text-dim); max-width: 800px;">
-            I am a PhD Research Scholar at the <strong>National Institute of Technology, Rourkela</strong>, working under the MeitY-sponsored <strong>Chips-to-Startup (C2S)</strong> program[cite: 12]. 
-            My work is dedicated to securing the Industrial Internet of Things (IIoT) through robust hardware design. 
-            With an All India Rank of <strong>7458 in GATE 2024</strong>, I bridge the gap between theoretical cryptography and high-performance silicon implementation[cite: 8, 86].
-        </p>
-    </section>
-
-    <section id="research">
-        <h2>Research Focus</h2>
-        <div class="info-card">
-            <h3>TPM for Industrial IoT Gateways</h3>
-            <h4>Ph.D. Research (Ongoing)</h4>
-            <p>Designing and developing Trusted Platform Modules (TPM) to serve as a hardware root-of-trust for industrial security.</p>
-        </div>
-        <div class="info-card">
-            <h3>ASCON Cryptographic Accelerators</h3>
-            <h4>Hardware Integration</h4>
-            <p>Pipelined implementation of the ASCON authenticated encryption algorithm, optimized for SCL 180nm ASIC technology[cite: 30, 31, 64].</p>
+        <div class="container">
+            <h2>Professional Profile</h2>
+            <p style="font-size: 1.1rem; color: #444;">
+                Reliable and resourceful VLSI Design Engineer with extensive experience in integrating cryptographic algorithms and security protocols into VLSI systems[cite: 7, 8]. 
+                Currently pursuing a Ph.D. at NIT Rourkela under the MeitY-sponsored Chips-to-Startup (C2S) program[cite: 11, 12]. My work focuses on bridging the gap between hardware architecture 
+                and advanced data security for the Industrial Internet of Things (IIoT)[cite: 13, 14].
+            </p>
         </div>
     </section>
 
-    <section id="experience">
-        <h2>Professional Experience</h2>
-        <div class="info-card">
-            <h3>Project Assistant | MeitY C2S SMDP</h3>
-            <h4>Parala Maharaja Engineering College (2023 - 2024)</h4>
-            <ul>
-                <li>Designed Odisha's first energy-efficient approximate multiplier chip, showcased at Semicon India 2025[cite: 19, 69].</li>
-                <li>Gained hands-on experience in the RTL-to-GDSII flow using Cadence and Synopsys toolchains[cite: 17, 90].</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="skills">
-        <h2>Technical Expertise</h2>
-        <div class="skills-grid">
-            <div>
-                <h3 style="color: var(--accent); margin-bottom: 15px;">Tools & Platforms</h3>
-                <ul>
-                    <li>Cadence Virtuoso, Innovus, & Genus [cite: 26, 75]</li>
-                    <li>Synopsys Design Compiler & IC Compiler [cite: 26]</li>
-                    <li>Siemens/Mentor Calibre (DRC/LVS) [cite: 26, 47]</li>
-                    <li>Xilinx Vivado (FPGA Flow) [cite: 52, 89]</li>
-                </ul>
+    <section id="research" class="alt-bg">
+        <div class="container">
+            <h2>Ongoing Research Frontiers</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Data & Image Security</h3>
+                    <p>Developing robust hardware-level security mechanisms for sensitive data and high-resolution imaging systems used in critical infrastructure.</p>
+                </div>
+                <div class="card">
+                    <h3>Post-Quantum Cryptography (PQC)</h3>
+                    <p>Exploring and designing ASIC architectures for lattice-based and other PQC algorithms to future-proof hardware against quantum computing threats.</p>
+                </div>
+                <div class="card">
+                    <h3>ASIC Design of RISC-V</h3>
+                    <p>Working on specialized RISC-V processor designs that incorporate custom cryptographic instructions and secure boot mechanisms.</p>
+                </div>
+                <div class="card">
+                    <h3>Lightweight Cryptography</h3>
+                    <p>Focusing on the ASIC implementation of NIST lightweight winners like ASCON to secure resource-constrained edge devices[cite: 14, 27, 31].</p>
+                </div>
             </div>
-            <div>
-                <h3 style="color: var(--accent); margin-bottom: 15px;">Core Domains</h3>
-                <ul>
-                    <li>Hardware Security & Cryptography [cite: 8, 25]</li>
-                    <li>RTL Coding (Verilog) & TCL Scripting [cite: 18, 25]</li>
-                    <li>ASIC Design (SCL 180nm, TSMC 45/90/180) [cite: 26]</li>
-                    <li>Static Timing Analysis (STA) [cite: 27]</li>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Energy-Efficient Approximate Multiplier</h3>
+                    <p>Designed and fabricated one of only three ICs developed in Odisha, showcased at Semicon India.</p>
+                    <ul>
+                        <li>Proposed approximate compressor and full adder to reduce power and area[cite: 36, 46].</li>
+                        <li>Successfully fabricated at SCL Chandigarh using 180nm technology[cite: 38, 45].</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>FIFO-enabled ASCON ASIC</h3>
+                    <p>Implementation of ASCON authenticated encryption algorithm with a FIFO interface for secure data exchange.</p>
+                    <ul>
+                        <li>Technology node: SCL 180nm[cite: 30].</li>
+                        <li>Focused on low power, area efficiency, and timing optimization[cite: 33].</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Trusted Platform Module (TPM)</h3>
+                    <p>Ongoing development of a custom TPM for securing Industrial IoT Gateways under the C2S program[cite: 12, 13, 61].</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="mentorship" class="alt-bg">
+        <div class="container">
+            <h2>Mentorship & Student Collaborations</h2>
+            <div class="mentorship-box">
+                <h4>Empowering Future VLSI Engineers</h4>
+                <p>I actively guide junior researchers and undergraduate students in the design of digital systems and cryptographic modules. Notable student collaborations include:</p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li><strong>Image Security Project:</strong> Mentoring students on the hardware implementation of encryption for image sensors.</li>
+                    <li><strong>FPGA Acceleration:</strong> Collaborated with a team of six for high-performance Microstrip Patch Antenna designs using HFSS[cite: 57].</li>
+                    <li><strong>RTL Design:</strong> Guiding students through the standard cell-based ASIC design flow, from Verilog to physical verification using Calibre[cite: 44, 47, 50].</li>
                 </ul>
             </div>
         </div>
     </section>
 
     <section id="achievements">
-        <h2>Milestones</h2>
-        <div class="info-card">
-            <h3>IEEE ISES 2025 (Accepted)</h3>
-            <p>"High-Efficiency FPGA Implementations of ASCON-128/128A: A Unified Pipelined Architecture"[cite: 63].</p>
-        </div>
-        <div class="info-card">
-            <h3>Tape-Out Success</h3>
-            <p>Successfully fabricated one IC at SCL Chandigarh, with a second module under development[cite: 34, 38, 85].</p>
-        </div>
-        <div class="info-card">
-            <h3>IEEE ITC India Fellow</h3>
-            <p>Selected as a student fellow for the 9th IEEE International Test Conference India 2025[cite: 71, 72].</p>
+        <div class="container">
+            <h2>Key Achievements</h2>
+            <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+                <div class="card" style="flex: 1; min-width: 250px;">
+                    <h3>Tape-Out Milestone</h3>
+                    <p>Successfully fabricated one chip with SCL Chandigarh, with another currently under development[cite: 34, 85].</p>
+                </div>
+                <div class="card" style="flex: 1; min-width: 250px;">
+                    <h3>Professional Fellows</h3>
+                    <p>Selected as a student fellow for the 9th IEEE International Test Conference India 2025 and VDAT-2024[cite: 71, 72, 79, 80].</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="contact" style="border: none; text-align: center;">
-        <h2>Contact</h2>
-        <p style="margin-bottom: 30px;">Open for research collaborations and technical fellowships.</p>
-        <a href="mailto:er.pkmohanty2022@gmail.com" style="color: var(--accent); text-decoration: none; font-size: 1.5rem; font-weight: 700;">er.pkmohanty2022@gmail.com</a>
-        <div class="social-icons" style="margin-top: 40px;">
-            <a href="https://linkedin.com/in/er-pradeep">LinkedIn</a>
-            <a href="https://github.com/erpkmohanty">GitHub</a>
-            <a href="https://youtube.com/@erpkmohanty">YouTube</a>
+    <section id="contact">
+        <div class="container" style="text-align: center;">
+            <h2>Get In Touch</h2>
+            <p style="margin-bottom: 20px;">I am open to research collaborations and academic discussions.</p>
+            <p style="font-size: 1.2rem; font-weight: 600;">Email: <a href="mailto:er.pkmohanty2022@gmail.com" style="color: var(--accent); text-decoration: none;">er.pkmohanty2022@gmail.com</a></p>
+            <div class="social-links" style="margin-top: 30px;">
+                <a href="https://linkedin.com/in/er-pradeep">LinkedIn</a>
+                <a href="https://github.com/erpkmohanty">GitHub</a>
+                <a href="https://youtube.com/@erpkmohanty">YouTube</a>
+            </div>
         </div>
     </section>
 
     <footer>
-        <p>© 2026 Er. Pradeep Kumar Mohanty. Built for Academic Excellence.</p>
+        <div class="container">
+            <p>© 2026 Er. Pradeep Kumar Mohanty. All rights reserved.</p>
+        </div>
     </footer>
 
 </body>
