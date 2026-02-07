@@ -6,217 +6,227 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
-body {
-    margin: 0;
-    font-family: "Georgia", "Segoe UI", serif;
-    background: #f2f2f2;
-    color: #222;
+/* GLOBAL */
+html {
+  scroll-behavior: smooth;
 }
 
-/* NAVBAR */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f2f2f2;
+  color: #222;
+}
+
+/* STICKY NAVBAR */
 nav {
-    background: #1f1f3d;
-    padding: 14px 0;
-    text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #1f1f3d;
+  padding: 14px 0;
+  text-align: center;
 }
 
 nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 18px;
-    font-size: 0.95em;
-    letter-spacing: 0.5px;
+  color: white;
+  text-decoration: none;
+  margin: 0 16px;
+  font-size: 0.95em;
+  letter-spacing: 0.5px;
 }
 
 nav a:hover {
-    text-decoration: underline;
+  border-bottom: 2px solid #ffd27d;
+  padding-bottom: 4px;
 }
 
 /* HERO */
 .hero {
-    background: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
-                url("hero.jpg") center/cover;
-    color: white;
-    padding: 100px 20px;
-    text-align: center;
+  background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
+              url("hero.jpg") center/cover;
+  color: white;
+  padding: 110px 20px;
+  text-align: center;
 }
 
 .hero h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
-    font-weight: normal;
+  font-size: 3em;
+  margin-bottom: 10px;
+  font-weight: normal;
 }
 
 .hero p {
-    font-size: 1.1em;
-    color: #ffd27d;
+  font-size: 1.1em;
+  color: #ffd27d;
 }
 
 /* MAIN */
 main {
-    max-width: 1200px;
-    margin: auto;
-    background: white;
+  max-width: 1200px;
+  margin: auto;
+  background: white;
+}
+
+/* SECTIONS */
+section {
+  padding: 70px 60px;
+}
+
+section h2 {
+  color: #1f1f3d;
+  font-size: 1.8em;
+  border-bottom: 3px solid #e6dccb;
+  display: inline-block;
+  padding-bottom: 6px;
+  margin-bottom: 25px;
 }
 
 /* ABOUT */
 .about {
-    display: flex;
-    gap: 50px;
-    padding: 60px;
-    align-items: center;
+  display: flex;
+  gap: 50px;
+  align-items: center;
 }
 
 .about img {
-    width: 280px;
-    box-shadow: 0 8px 20px rgba(0,0,0,.2);
-}
-
-.about h2 {
-    font-size: 1.8em;
-    border-bottom: 3px solid #1f1f3d;
-    display: inline-block;
-    padding-bottom: 6px;
+  width: 260px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.2);
 }
 
 .about p {
-    margin-top: 20px;
-    line-height: 1.8;
+  line-height: 1.8;
 }
 
-/* SECTION TITLE */
-.section-title {
-    background: #e6dccb;
-    padding: 20px 60px;
-    font-size: 1.6em;
-    letter-spacing: 1px;
-}
-
-/* RESEARCH */
-.research {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    padding: 50px 60px;
+/* RESEARCH CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
 }
 
 .card {
-    background: #fafafa;
-    padding: 20px;
-    box-shadow: 0 4px 12px rgba(0,0,0,.1);
-}
-
-.card img {
-    width: 100%;
-    margin-bottom: 15px;
-}
-
-.card h3 {
-    margin-top: 0;
-    color: #1f1f3d;
+  background: #fafafa;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.1);
 }
 
 /* FOOTER */
 footer {
-    background: #1f1f3d;
-    color: white;
-    text-align: center;
-    padding: 25px;
-    font-size: 0.9em;
+  background: #1f1f3d;
+  color: white;
+  text-align: center;
+  padding: 25px;
+  font-size: 0.9em;
 }
 
 /* RESPONSIVE */
-@media(max-width: 900px){
-    .about {
-        flex-direction: column;
-        text-align: center;
-    }
-    .research {
-        grid-template-columns: 1fr;
-    }
+@media(max-width: 900px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+  .cards {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAV -->
+<!-- STICKY NAV -->
 <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About Me</a>
-    <a href="#research">Research</a>
-    <a href="#publications">Publications</a>
-    <a href="#contact">Contact Me</a>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#research">Research</a>
+  <a href="#publications">Publications</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
 </nav>
 
 <!-- HERO -->
 <section class="hero" id="home">
-    <h1>Er. Pradeep Kumar Mohanty</h1>
-    <p>
-        Ph.D. Research Scholar | VLSI Design & Cryptographic Hardware <br>
-        Industrial IoT Security (TPM) | C2S Program
-    </p>
+  <h1>Er. Pradeep Kumar Mohanty</h1>
+  <p>
+    Ph.D. Research Scholar | VLSI Design & Cryptographic Hardware <br>
+    Industrial IoT Security (TPM) | C2S Program
+  </p>
 </section>
 
 <main>
 
 <!-- ABOUT -->
-<section class="about" id="about">
-    <img src="photo.jpg" alt="Pradeep Kumar Mohanty">
-    <div>
-        <h2>ABOUT ME</h2>
-        <p>
-            I am a Ph.D. Research Scholar at NIT Rourkela working on the design and
-            development of Trusted Platform Modules (TPM) for securing Industrial
-            IoT Gateways. My research focuses on cryptographic hardware, secure ASIC
-            design, and FPGA implementations.
-        </p>
-        <p>
-            <strong>Email:</strong> er.pkmohanty2022@gmail.com<br>
-            <strong>Location:</strong> Rourkela, Odisha, India
-        </p>
-    </div>
+<section id="about">
+  <h2>About Me</h2>
+  <div class="about">
+    <img src="profile.jpg" alt="Pradeep Kumar Mohanty">
+    <p>
+      I am a Ph.D. Research Scholar at NIT Rourkela working on the design and
+      development of Trusted Platform Modules (TPM) for securing Industrial IoT
+      Gateways. My research focuses on cryptographic hardware, secure ASIC design,
+      and FPGA implementations.
+      <br><br>
+      <strong>Email:</strong> er.pkmohanty2022@gmail.com<br>
+      <strong>Location:</strong> Rourkela, Odisha, India
+    </p>
+  </div>
 </section>
 
 <!-- RESEARCH -->
-<div class="section-title" id="research">RESEARCH HIGHLIGHTS</div>
-
-<section class="research">
+<section id="research">
+  <h2>Research Highlights</h2>
+  <div class="cards">
     <div class="card">
-        <img src="hero.jpg" alt="">
-        <h3>Secure Cryptographic Hardware</h3>
-        <p>
-            Design and implementation of lightweight cryptographic accelerators
-            (ASCON) for ASIC and FPGA platforms.
-        </p>
+      <h3>Cryptographic Hardware</h3>
+      <p>
+        Design of lightweight cryptographic accelerators (ASCON) for ASIC and
+        FPGA platforms focusing on low power and high throughput.
+      </p>
     </div>
-
     <div class="card">
-        <img src="hero.jpg" alt="">
-        <h3>Industrial IoT Security</h3>
-        <p>
-            Research on Trusted Platform Modules (TPM) for secure Industrial IoT
-            gateways with low power and high reliability.
-        </p>
+      <h3>Industrial IoT Security</h3>
+      <p>
+        Development of Trusted Platform Modules (TPM) for secure Industrial IoT
+        gateways.
+      </p>
     </div>
+  </div>
 </section>
 
 <!-- PUBLICATIONS -->
-<div class="section-title" id="publications">PUBLICATIONS</div>
+<section id="publications">
+  <h2>Publications</h2>
+  <ul>
+    <li>High-Efficiency FPGA Implementations of ASCON – IEEE iSES</li>
+    <li>ASIC Implementation of KDF-based ASCON – VLSID 2026</li>
+    <li>Energy-Efficient Approximate Multiplier – MNDCS</li>
+  </ul>
+</section>
 
-<section class="research">
-    <div class="card">
-        <p>High-Efficiency FPGA Implementations of ASCON-128/128A – IEEE iSES</p>
-        <p>ASIC Implementation of KDF-based ASCON – VLSID 2026</p>
-        <p>Energy-Efficient Approximate Multiplier – MNDCS</p>
-    </div>
+<!-- PROJECTS -->
+<section id="projects">
+  <h2>Projects</h2>
+  <ul>
+    <li>FIFO-enabled ASCON ASIC (SCL 180nm)</li>
+    <li>Energy-Efficient Approximate Multiplier (Fabricated)</li>
+    <li>Face Detection using PYNQ-Z2 FPGA</li>
+  </ul>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+  <p>
+    Email: er.pkmohanty2022@gmail.com <br>
+    GitHub: https://github.com/Erpradeep2022
+  </p>
 </section>
 
 </main>
 
-<footer id="contact">
-    © 2026 Er. Pradeep Kumar Mohanty <br>
-    Academic Personal Website
+<footer>
+  © 2026 Er. Pradeep Kumar Mohanty | Academic Personal Website
 </footer>
 
 </body>
