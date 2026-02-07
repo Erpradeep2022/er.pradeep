@@ -6,19 +6,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
-/* GLOBAL */
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
   font-family: "Segoe UI", Arial, sans-serif;
-  background: #f2f2f2;
+  background: #f3f3f3;
   color: #222;
 }
 
-/* STICKY NAVBAR */
+/* STICKY NAV */
 nav {
   position: sticky;
   top: 0;
@@ -33,7 +30,6 @@ nav a {
   text-decoration: none;
   margin: 0 16px;
   font-size: 0.95em;
-  letter-spacing: 0.5px;
 }
 
 nav a:hover {
@@ -43,22 +39,22 @@ nav a:hover {
 
 /* HERO */
 .hero {
-  background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
+  background: linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)),
               url("hero.jpg") center/cover;
   color: white;
-  padding: 110px 20px;
+  padding: 120px 20px;
   text-align: center;
 }
 
 .hero h1 {
   font-size: 3em;
-  margin-bottom: 10px;
-  font-weight: normal;
+  margin-bottom: 12px;
+  font-weight: 500;
 }
 
 .hero p {
+  color: #ffcc80;
   font-size: 1.1em;
-  color: #ffd27d;
 }
 
 /* MAIN */
@@ -98,17 +94,13 @@ section h2 {
   line-height: 1.8;
 }
 
-/* RESEARCH CARDS */
-.cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
+/* LISTS */
+ul {
+  padding-left: 22px;
 }
 
-.card {
-  background: #fafafa;
-  padding: 25px;
-  box-shadow: 0 4px 12px rgba(0,0,0,.1);
+li {
+  margin-bottom: 10px;
 }
 
 /* FOOTER */
@@ -122,12 +114,10 @@ footer {
 
 /* RESPONSIVE */
 @media(max-width: 900px) {
+  section { padding: 50px 25px; }
   .about {
     flex-direction: column;
     text-align: center;
-  }
-  .cards {
-    grid-template-columns: 1fr;
   }
 }
 </style>
@@ -135,13 +125,15 @@ footer {
 
 <body>
 
-<!-- STICKY NAV -->
+<!-- NAV -->
 <nav>
   <a href="#home">Home</a>
   <a href="#about">About</a>
+  <a href="#education">Education</a>
+  <a href="#experience">Experience</a>
   <a href="#research">Research</a>
-  <a href="#publications">Publications</a>
   <a href="#projects">Projects</a>
+  <a href="#publications">Publications</a>
   <a href="#contact">Contact</a>
 </nav>
 
@@ -149,7 +141,7 @@ footer {
 <section class="hero" id="home">
   <h1>Er. Pradeep Kumar Mohanty</h1>
   <p>
-    Ph.D. Research Scholar | VLSI Design & Cryptographic Hardware <br>
+    Ph.D. Research Scholar | VLSI Design & Cryptographic Hardware<br>
     Industrial IoT Security (TPM) | C2S Program
   </p>
 </section>
@@ -160,12 +152,13 @@ footer {
 <section id="about">
   <h2>About Me</h2>
   <div class="about">
-    <img src="photo.jpg" alt="Pradeep Kumar Mohanty">
+    <img src="profile.jpg" alt="Pradeep Kumar Mohanty">
     <p>
-      I am a Ph.D. Research Scholar at NIT Rourkela working on the design and
-      development of Trusted Platform Modules (TPM) for securing Industrial IoT
-      Gateways. My research focuses on cryptographic hardware, secure ASIC design,
-      and FPGA implementations.
+      I am a Ph.D. Research Scholar at the National Institute of Technology,
+      Rourkela under the Chips-to-Startup (C2S) program. My research focuses on
+      the design and development of Trusted Platform Modules (TPM) for securing
+      Industrial IoT Gateways. My interests include cryptographic hardware,
+      secure ASIC design, and FPGA implementations.
       <br><br>
       <strong>Email:</strong> er.pkmohanty2022@gmail.com<br>
       <strong>Location:</strong> Rourkela, Odisha, India
@@ -173,34 +166,40 @@ footer {
   </div>
 </section>
 
-<!-- RESEARCH -->
-<section id="research">
-  <h2>Research Highlights</h2>
-  <div class="cards">
-    <div class="card">
-      <h3>Cryptographic Hardware</h3>
-      <p>
-        Design of lightweight cryptographic accelerators (ASCON) for ASIC and
-        FPGA platforms focusing on low power and high throughput.
-      </p>
-    </div>
-    <div class="card">
-      <h3>Industrial IoT Security</h3>
-      <p>
-        Development of Trusted Platform Modules (TPM) for secure Industrial IoT
-        gateways.
-      </p>
-    </div>
-  </div>
+<!-- EDUCATION -->
+<section id="education">
+  <h2>Education</h2>
+  <ul>
+    <li><strong>Ph.D. (Pursuing)</strong>, NIT Rourkela – Secure TPM for Industrial IoT</li>
+    <li><strong>B.Tech</strong>, Electronics & Telecommunication, PMEC Berhampur (CGPA: 8.61)</li>
+    <li>Intermediate in Science – Aska Science College</li>
+  </ul>
 </section>
 
-<!-- PUBLICATIONS -->
-<section id="publications">
-  <h2>Publications</h2>
+<!-- EXPERIENCE -->
+<section id="experience">
+  <h2>Experience</h2>
   <ul>
-    <li>High-Efficiency FPGA Implementations of ASCON – IEEE iSES</li>
-    <li>ASIC Implementation of KDF-based ASCON – VLSID 2026</li>
-    <li>Energy-Efficient Approximate Multiplier – MNDCS</li>
+    <li>
+      <strong>Ph.D. Research Scholar</strong> (2025–Present)<br>
+      NIT Rourkela – Working on cryptographic hardware and TPM design
+    </li>
+    <li>
+      <strong>Project Assistant</strong> (2023–2024)<br>
+      PMEC Berhampur – ASIC design using Cadence & Synopsys tools
+    </li>
+  </ul>
+</section>
+
+<!-- RESEARCH -->
+<section id="research">
+  <h2>Research Interests</h2>
+  <ul>
+    <li>Hardware Security & Cryptographic Accelerators</li>
+    <li>ASIC and FPGA Design</li>
+    <li>Lightweight Cryptography (ASCON)</li>
+    <li>Industrial IoT Security & TPM</li>
+    <li>Low-Power VLSI Design</li>
   </ul>
 </section>
 
@@ -208,9 +207,20 @@ footer {
 <section id="projects">
   <h2>Projects</h2>
   <ul>
-    <li>FIFO-enabled ASCON ASIC (SCL 180nm)</li>
-    <li>Energy-Efficient Approximate Multiplier (Fabricated)</li>
+    <li>ASIC Implementation of FIFO-enabled ASCON Module (SCL 180nm)</li>
+    <li>Energy-Efficient Approximate Multiplier ASIC (Fabricated)</li>
     <li>Face Detection using PYNQ-Z2 FPGA</li>
+    <li>ASIC Implementation of Up-Counter (RTL to GDS-II)</li>
+  </ul>
+</section>
+
+<!-- PUBLICATIONS -->
+<section id="publications">
+  <h2>Publications</h2>
+  <ul>
+    <li>High-Efficiency FPGA Implementations of ASCON-128/128A – IEEE iSES (Accepted)</li>
+    <li>ASIC Implementation of KDF-based ASCON AEAD – VLSID 2026 (Under Review)</li>
+    <li>Energy-Efficient Approximate Multiplier – MNDCS Conference</li>
   </ul>
 </section>
 
@@ -218,8 +228,9 @@ footer {
 <section id="contact">
   <h2>Contact</h2>
   <p>
-    Email: er.pkmohanty2022@gmail.com <br>
-    GitHub: https://github.com/Erpradeep2022
+    📧 Email: er.pkmohanty2022@gmail.com<br>
+    📍 Rourkela, Odisha, India<br>
+    🔗 GitHub: https://github.com/Erpradeep2022
   </p>
 </section>
 
