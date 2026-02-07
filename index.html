@@ -3,212 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Er. Pradeep Kumar Mohanty | VLSI & Hardware Security</title>
+    <title>Er. Pradeep Kumar Mohanty | Research Lead & VLSI Engineer</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg: #050505;
-            --surface: #0f0f0f;
+            --bg: #030303;
+            --surface: #0d0d0d;
             --accent: #007bff; 
-            --accent-glow: rgba(0, 123, 255, 0.3);
+            --accent-glow: rgba(0, 123, 255, 0.4);
             --text: #ffffff;
             --text-dim: #b0b0b0;
-            --border: #1e1e1e;
+            --border: #222;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; }
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
-            line-height: 1.7;
-        }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.7; }
 
-        /* --- NAVIGATION --- */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 8%;
-            position: fixed;
-            width: 100%;
-            z-index: 1000;
-            background: rgba(5, 5, 5, 0.8);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border);
-        }
+        /* --- NAV --- */
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 8%; position: fixed; width: 100%; z-index: 1000; background: rgba(3, 3, 3, 0.85); backdrop-filter: blur(15px); border-bottom: 1px solid var(--border); }
         .logo { font-family: 'Montserrat'; font-weight: 900; letter-spacing: 2px; font-size: 1.1rem; }
-        .nav-links a {
-            color: white; text-decoration: none; margin-left: 25px;
-            font-size: 0.8rem; font-weight: 600; text-transform: uppercase; transition: 0.3s;
-        }
+        .nav-links a { color: white; text-decoration: none; margin-left: 20px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; transition: 0.3s; }
         .nav-links a:hover { color: var(--accent); }
 
         /* --- HERO --- */
-        .hero {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 0 10%;
-            background: radial-gradient(circle at center, #111 0%, #050505 100%);
-        }
-        .profile-wrapper {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 4px solid var(--accent);
-            box-shadow: 0 0 30px var(--accent-glow);
-            margin-bottom: 25px;
-        }
-        .profile-wrapper img { width: 100%; height: 100%; object-fit: cover; }
-        .hero span { color: var(--accent); font-weight: 700; letter-spacing: 5px; text-transform: uppercase; font-size: 0.9rem; }
-        .hero h1 { font-family: 'Montserrat'; font-size: clamp(2.2rem, 6vw, 5rem); font-weight: 900; line-height: 1.1; margin: 15px 0; }
-        .hero p { font-size: 1.1rem; color: var(--text-dim); max-width: 700px; margin-bottom: 40px; }
+        .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 10%; background: radial-gradient(circle at center, #111 0%, #030303 100%); }
+        .profile-frame { width: 160px; height: 160px; border-radius: 50%; overflow: hidden; border: 3px solid var(--accent); margin-bottom: 20px; box-shadow: 0 0 40px var(--accent-glow); }
+        .profile-frame img { width: 100%; height: 100%; object-fit: cover; }
+        .hero h1 { font-family: 'Montserrat'; font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 900; line-height: 1.1; margin: 15px 0; }
+        .hero p { color: var(--text-dim); max-width: 800px; margin-bottom: 30px; }
 
-        /* --- SECTIONS --- */
+        /* --- SECTION DECOR --- */
         section { padding: 100px 10%; border-bottom: 1px solid var(--border); }
-        .section-title { font-family: 'Montserrat'; font-size: 2.2rem; font-weight: 900; margin-bottom: 50px; }
-        .section-title span { color: var(--accent); }
+        .section-tag { color: var(--accent); font-weight: 800; text-transform: uppercase; letter-spacing: 3px; font-size: 0.8rem; display: block; margin-bottom: 10px; }
+        .section-title { font-family: 'Montserrat'; font-size: 2.5rem; font-weight: 900; margin-bottom: 50px; }
 
-        /* --- METRICS --- */
-        .metrics {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin-bottom: 60px;
-        }
-        .metric-card { background: var(--surface); padding: 30px; border: 1px solid var(--border); border-radius: 8px; text-align: center; }
-        .metric-card h2 { color: var(--accent); font-size: 2rem; font-family: 'Montserrat'; margin-bottom: 5px; }
-        .metric-card p { font-size: 0.75rem; text-transform: uppercase; color: var(--text-dim); }
+        /* --- RESEARCH GRID --- */
+        .res-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .res-card { background: var(--surface); padding: 40px; border-radius: 15px; border: 1px solid var(--border); transition: 0.4s; position: relative; overflow: hidden; }
+        .res-card:hover { border-color: var(--accent); transform: translateY(-5px); }
+        .res-card h3 { font-family: 'Montserrat'; color: var(--accent); margin-bottom: 15px; font-size: 1.2rem; }
+        .status-badge { position: absolute; top: 20px; right: 20px; font-size: 0.6rem; font-weight: 900; background: #222; padding: 4px 10px; border-radius: 20px; text-transform: uppercase; }
 
-        /* --- CONTENT GRID --- */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-        .card { background: var(--surface); padding: 35px; border-radius: 12px; border: 1px solid var(--border); transition: 0.3s; }
-        .card:hover { border-color: var(--accent); transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-        .card h3 { font-family: 'Montserrat'; margin-bottom: 15px; font-size: 1.1rem; color: var(--accent); letter-spacing: 1px; }
-        .card ul { list-style: none; font-size: 0.9rem; color: var(--text-dim); }
-        .card li { margin-bottom: 10px; padding-left: 20px; position: relative; }
-        .card li::before { content: "•"; position: absolute; left: 0; color: var(--accent); font-weight: bold; }
+        /* --- STUDENTS / TEAM --- */
+        .team-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; }
+        .member-card { background: #080808; padding: 25px; border-left: 4px solid var(--accent); border-radius: 4px; }
+        .member-card h4 { font-family: 'Montserrat'; margin-bottom: 5px; }
+        .member-card p { font-size: 0.8rem; color: var(--text-dim); }
 
-        /* --- FOOTER & SOCIAL --- */
-        footer { padding: 80px 10%; text-align: center; background: #020202; }
-        .social-grid { display: flex; justify-content: center; gap: 30px; margin: 40px 0; }
-        .social-link { color: white; text-decoration: none; font-weight: 700; font-size: 0.9rem; transition: 0.3s; }
-        .social-link:hover { color: var(--accent); }
-        .contact-btn { 
-            display: inline-block; padding: 18px 45px; background: var(--accent); 
-            color: white; text-decoration: none; font-weight: 900; 
-            border-radius: 50px; font-family: 'Montserrat'; margin-top: 20px;
-        }
+        /* --- ACHIEVEMENTS LIST --- */
+        .achieve-list { list-style: none; }
+        .achieve-item { display: flex; align-items: flex-start; margin-bottom: 25px; gap: 20px; }
+        .icon-box { background: var(--surface); padding: 15px; border-radius: 10px; color: var(--accent); font-weight: 900; }
+        .achieve-content h4 { font-family: 'Montserrat'; font-size: 1.1rem; }
+        .achieve-content p { color: var(--text-dim); font-size: 0.9rem; }
 
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .hero h1 { font-size: 2.5rem; }
-        }
+        /* --- FOOTER --- */
+        footer { padding: 80px 10%; text-align: center; background: #010101; }
+        .contact-link { font-family: 'Montserrat'; font-size: clamp(1rem, 4vw, 2.5rem); color: white; text-decoration: none; font-weight: 900; transition: 0.3s; }
+        .contact-link:hover { color: var(--accent); }
+
+        @media (max-width: 768px) { .nav-links { display: none; } }
     </style>
 </head>
 <body>
 
     <nav>
-        <div class="logo">ER. P.K. MOHANTY</div>
+        <div class="logo">P.K. MOHANTY</div>
         <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#projects">Hardware</a>
-            <a href="#publications">Research</a>
+            <a href="#research">Research</a>
+            <a href="#publications">Publications</a>
+            <a href="#students">Students</a>
+            <a href="#achievements">Achievements</a>
             <a href="#contact">Contact</a>
         </div>
     </nav>
 
-    <header class="hero">
-        <div class="profile-wrapper">
-            <img src="photo.jpg" alt="Pradeep Kumar Mohanty">
-        </div>
-        <span>PhD Scholar @ NIT Rourkela</span>
-        <h1>INNOVATING <br>SECURE SYSTEMS.</h1>
-        <p>Specializing in <strong>ASIC Design Flow</strong>, <strong>Trusted Platform Modules (TPM)</strong>, and <strong>Cryptographic Hardware</strong> under the MeitY-sponsored C2S program[cite: 12, 13, 27].</p>
-        <a href="#projects" class="contact-btn">EXPLORE MY WORK</a>
-    </header>
-
-    <section id="metrics">
-        <div class="metrics">
-            <div class="metric-card"><h2>1+</h2><p>Tape-Out Success [cite: 85]</p></div>
-            <div class="metric-card"><h2>7458</h2><p>GATE AIR 2024 [cite: 86]</p></div>
-            <div class="metric-card"><h2>180nm</h2><p>SCL Node Expertise [cite: 30, 45]</p></div>
-            <div class="metric-card"><h2>8.61</h2><p>B.Tech CGPA [cite: 61]</p></div>
+    <section class="hero">
+        <div class="profile-frame"><img src="photo.jpg" alt="Pradeep Kumar Mohanty"></div>
+        <span class="section-tag">National Institute of Technology, Rourkela</span>
+        <h1>ADVANCING <br>INDIGENOUS SILICON.</h1>
+        <p>Ph.D. Research Scholar under the MeitY-sponsored C2S SMDP program. Architecting secure, energy-efficient ASIC/FPGA solutions for Industrial IoT Gateways and Cryptographic Hardware.</p>
+        <div style="margin-top: 20px;">
+            <a href="mailto:er.pkmohanty2022@gmail.com" style="color: var(--accent); text-decoration: none; font-weight: 900; letter-spacing: 2px;">GET IN TOUCH →</a>
         </div>
     </section>
 
-    <section id="about">
-        <h2 class="section-title">Academic <span>& Professional</span></h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Ph.D. Research [cite: 11]</h3>
-                <p>Focused on securing Industrial IoT Gateways through indigenous TPM design and development within the Chips-to-Startup (C2S) framework[cite: 12, 13].</p>
+    <section id="research">
+        <span class="section-tag">Research Portfolio</span>
+        <h2 class="section-title">Carried & Ongoing Work</h2>
+        <div class="res-grid">
+            <div class="res-card">
+                <span class="status-badge" style="color: #00ff00;">Completed Tape-Out</span>
+                <h3>Approximate Multiplier Design</h3>
+                <p>Proposed novel approximate compressors and full adders. Successfully fabricated at SCL Chandigarh (180nm). Future focus: Integration within CNN architectures for edge AI[cite: 35, 36, 38, 39].</p>
             </div>
-            <div class="card">
-                <h3>Technical Skills [cite: 20]</h3>
-                <ul>
-                    <li>Cadence Virtuoso, Innovus & Genus [cite: 26, 32]</li>
-                    <li>SCL 180nm PDK & Physical Verification [cite: 45, 47]</li>
-                    <li>RTL Coding (Verilog) & TCL Scripting [cite: 25]</li>
-                    <li>FPGA Prototyping (Artix-7, PYNQ Z2) [cite: 25, 40]</li>
-                </ul>
+            <div class="res-card">
+                <span class="status-badge" style="color: var(--accent);">Ongoing Ph.D.</span>
+                <h3>TPM for Industrial IoT</h3>
+                <p>Designing and developing Trusted Platform Modules (TPM) to provide a hardware root-of-trust for securing IIoT Gateways[cite: 13, 61].</p>
+            </div>
+            <div class="res-card">
+                <span class="status-badge" style="color: #ffcc00;">Under Review</span>
+                <h3>ASCON Pipelined Accelerator</h3>
+                <p>Implementing a KDF-based ASCON AEAD optimized cryptographic accelerator using ASIC design flow[cite: 64].</p>
             </div>
         </div>
     </section>
 
-    <section id="projects" style="background: #080808;">
-        <h2 class="section-title">Hardware <span>Tape-Outs</span></h2>
-        <div class="grid">
-            <div class="card">
-                <h3>FIFO-Enabled ASCON ASIC [cite: 29]</h3>
-                <p>Designed a lightweight authenticated encryption module using SCL 180nm technology. One of the pioneering ICs developed in Odisha and showcased at Semicon India[cite: 19, 30].</p>
+    <section id="students" style="background: #050505;">
+        <span class="section-tag">Academic Leadership</span>
+        <h2 class="section-title">Research Mentorship</h2>
+        <p style="color: var(--text-dim); margin-bottom: 40px; max-width: 600px;">Guiding undergraduate and junior research scholars in VLSI design, FPGA prototyping, and RTL-to-GDSII flow.</p>
+        <div class="team-grid">
+            <div class="member-card">
+                <h4>Project Mentorship</h4>
+                <p>Assisting students in Verilog-based digital design and FPGA implementation on Basys-3 and PYNQ-Z2 boards[cite: 52, 89].</p>
             </div>
-            <div class="card">
-                <h3>Approximate Multiplier Chip [cite: 35]</h3>
-                <p>Engineered an energy-efficient multiplier featuring approximate compressors to drastically reduce power and area in neural network architectures[cite: 36, 38, 39].</p>
+            <div class="member-card">
+                <h4>Tool Training</h4>
+                <p>Leading sessions on Cadence Virtuoso, Innovus, and Calibre for physical verification (DRC/LVS)[cite: 26, 47].</p>
             </div>
-            <div class="card">
-                <h3>Trusted Platform Module [cite: 13]</h3>
-                <p>Architecting hardware-level security roots for IIoT gateways to ensure data integrity and secure communication[cite: 13, 14].</p>
+            <div class="member-card">
+                <h4>SMDP C2S Collaborations</h4>
+                <p>Coordinating collaborative research between PMEC Berhampur and NIT Rourkela for indigenous chip development.</p>
             </div>
         </div>
     </section>
 
     <section id="publications">
-        <h2 class="section-title">Select <span>Publications</span> [cite: 62]</h2>
-        <div class="card" style="margin-bottom: 20px; width: 100%;">
-            <h3>IEEE ISES 2025 (Accepted) [cite: 63]</h3>
-            <p>"High-Efficiency FPGA Implementations of ASCON-128/128A: A Unified Pipelined Architecture for Edge Devices"[cite: 63].</p>
-        </div>
-        <div class="card" style="width: 100%;">
-            <h3>VLSID 2026 (Under Review) [cite: 64]</h3>
-            <p>"ASIC Implementation of KDF based ASCON AEAD Optimized Cryptographic Pipelined Accelerator"[cite: 64].</p>
+        <span class="section-tag">Scientific Contribution</span>
+        <h2 class="section-title">Publications</h2>
+        <div class="achieve-list">
+            <div class="achieve-item">
+                <div class="icon-box">2025</div>
+                <div class="achieve-content">
+                    <h4>High-Efficiency FPGA Implementations of ASCON-128/128A</h4>
+                    <p>11th IEEE International Symposium on Smart Electronic Systems (ISES) | Unified Pipelined Architecture[cite: 63].</p>
+                </div>
+            </div>
+            <div class="achieve-item">
+                <div class="icon-box">2026</div>
+                <div class="achieve-content">
+                    <h4>ASIC Implementation of KDF based ASCON AEAD</h4>
+                    <p>39th International Conference on VLSI Design (VLSID) | Pipelined Accelerator (Under Review)[cite: 64].</p>
+                </div>
+            </div>
+            <div class="achieve-item">
+                <div class="icon-box">JNL</div>
+                <div class="achieve-content">
+                    <h4>Microstrip Patch Antenna for Wi-Fi Applications</h4>
+                    <p>Kronika Journal | Co-author, design using Ansys HFSS[cite: 65, 53].</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="contact" style="border: none;">
-        <h2 class="section-title" style="text-align: center;">Connect <span>With Me</span></h2>
-        <div style="text-align: center;">
-            <p>Ready for fellowships, research collaborations, or technical consultations.</p>
-            
-            <div class="social-grid">
-                <a href="https://linkedin.com/in/er-pradeep" class="social-link">LINKEDIN</a>
-                <a href="https://github.com/erpkmohanty" class="social-link">GITHUB</a>
-                <a href="https://youtube.com/@erpkmohanty" class="social-link">YOUTUBE</a>
+    <section id="achievements" style="background: #050505;">
+        <span class="section-tag">Milestones</span>
+        <h2 class="section-title">Achievements & Fellowships</h2>
+        <div class="achieve-list">
+            <div class="achieve-item">
+                <div class="icon-box">Fellow</div>
+                <div class="achieve-content">
+                    <h4>IEEE ITC India Student Fellow</h4>
+                    <p>Selected as a student fellow for the 9th IEEE International Test Conference India 2025[cite: 71, 72].</p>
+                </div>
             </div>
+            <div class="achieve-item">
+                <div class="icon-box">Tape-Out</div>
+                <div class="achieve-content">
+                    <h4>Odisha's Indigenous Chip Development</h4>
+                    <p>Designed the first energy-efficient approximate multiplier chip in Odisha, showcased at Semicon India 2025[cite: 19, 70].</p>
+                </div>
+            </div>
+            <div class="achieve-item">
+                <div class="icon-box">AIR</div>
+                <div class="achieve-content">
+                    <h4>GATE 2024 All India Rank</h4>
+                    <p>Secured AIR 7458 with a score of 365[cite: 86].</p>
+                </div>
+            </div>
+            <div class="achieve-item">
+                <div class="icon-box">IEP</div>
+                <div class="achieve-content">
+                    <h4>Advanced Training - CDAC & IIT Indore</h4>
+                    <p>Completed Instruction Enhancement Programs on ASIC Analog Design (Op-amp) and 2x2 SRAM design using SCL 180nm PDK[cite: 73, 74, 76, 77].</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <a href="mailto:er.pkmohanty2022@gmail.com" class="contact-btn">ER.PKMOHANTY2022@GMAIL.COM</a>
+    <section id="contact" style="text-align: center; border-bottom: none;">
+        <span class="section-tag">Connect</span>
+        <h2 class="section-title">Start a Conversation</h2>
+        <a href="mailto:er.pkmohanty2022@gmail.com" class="contact-link">ER.PKMOHANTY2022@GMAIL.COM</a>
+        <div style="margin-top: 40px;">
+            <a href="https://linkedin.com/in/er-pradeep" style="color: var(--text-dim); text-decoration: none; margin: 0 15px;">LINKEDIN</a>
+            <a href="https://github.com/erpkmohanty" style="color: var(--text-dim); text-decoration: none; margin: 0 15px;">GITHUB</a>
+            <a href="https://youtube.com/@erpkmohanty" style="color: var(--text-dim); text-decoration: none; margin: 0 15px;">YOUTUBE</a>
         </div>
     </section>
 
     <footer>
-        <p>© 2026 Er. Pradeep Kumar Mohanty. <br> Built for VLSI Excellence.</p>
+        <p>© 2026 ER. PRADEEP KUMAR MOHANTY | ENGINEERED FOR SECURITY AND INNOVATION.</p>
     </footer>
 
 </body>
