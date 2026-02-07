@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Er. Pradeep Kumar Mohanty | PhD Scholar & Research Lead</title>
+    <title>Er. Pradeep Kumar Mohanty | PhD Scholar & VLSI Design Engineer</title>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -80,6 +80,14 @@
         .card li { margin-bottom: 10px; color: var(--text-light); font-size: 0.9rem; padding-left: 20px; position: relative; }
         .card li::before { content: "•"; position: absolute; left: 0; color: var(--accent); font-weight: bold; }
 
+        /* --- DETAILED CONTENT STYLES --- */
+        .timeline-item { margin-bottom: 40px; }
+        .timeline-item h4 { color: var(--primary); margin-bottom: 8px; font-size: 1.1rem; }
+        .timeline-meta { color: var(--accent); font-weight: 600; font-size: 0.9rem; margin-bottom: 5px; }
+        .skill-category { margin-bottom: 30px; }
+        .skill-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+        .skill-tag { background: var(--accent-soft); color: var(--accent); padding: 8px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
+        
         /* --- MENTORSHIP BANNER --- */
         .mentorship-banner {
             background: var(--accent-soft); border: 1px solid #dbeafe;
@@ -100,7 +108,12 @@
         .social-links a { color: white; text-decoration: none; margin: 0 15px; font-weight: 600; opacity: 0.8; transition: 0.3s; }
         .social-links a:hover { opacity: 1; color: var(--accent); }
 
-        @media (max-width: 768px) { h1 { font-size: 2.5rem; } .nav-links { display: none; } }
+        @media (max-width: 768px) { 
+            h1 { font-size: 2.5rem; } 
+            .nav-links { display: none; } 
+            .container { padding: 0 20px; }
+            section { padding: 60px 0; }
+        }
     </style>
 </head>
 <body>
@@ -110,9 +123,11 @@
             <div class="logo">Er. Pradeep Kumar Mohanty</div>
             <div class="nav-links">
                 <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
                 <a href="#research">Research</a>
-                <a href="#mentorship">Mentorship</a>
-                <a href="#projects">Work</a>
+                <a href="#education">Education</a>
                 <a href="#contact">Contact</a>
             </div>
         </div>
@@ -123,10 +138,10 @@
             <div class="profile-wrapper">
                 <img src="photo.jpg" alt="Pradeep Kumar Mohanty">
             </div>
-            <p class="hero-title">Ph.D. RESEARCH SCHOLAR</p>
+            <p class="hero-title">Ph.D. RESEARCH SCHOLAR | VLSI DESIGN ENGINEER</p>
             <h1>Pradeep Kumar Mohanty</h1>
-            <p class="hero-meta">NIT Rourkela | C2S Program | VLSI Design Engineer</p>
-            <p style="margin-top: 15px; color: #64748b; font-weight: 500;">GATE 2024 AIR: 7458 | CGPA: 8.61</p>
+            <p class="hero-meta">National Institute of Technology Rourkela | C2S SMDP Program</p>
+            <p style="margin-top: 15px; color: #64748b; font-weight: 500;">GATE 2024 AIR: 7458 | CGPA: 8.61 | 2+ Years Research Experience</p>
         </div>
     </header>
 
@@ -134,51 +149,116 @@
         <div class="container">
             <div class="section-header"><h2>Professional Summary</h2></div>
             <p style="font-size: 1.15rem; color: #475569; max-width: 900px;">
-                Reliable and resourceful VLSI Design Engineer with a strong record of corporate and academic success. Currently pursuing Ph.D. at NIT Rourkela under the MeitY-sponsored C2S SMDP program. 
-                Expert in integrating complex cryptographic algorithms and security protocols into high-performance silicon systems. Specialized in <strong>RTL-to-GDSII flow</strong> and hardware-based root of trust.
+                Reliable and resourceful VLSI Design Engineer with a strong record of corporate client satisfaction. 
+                Currently pursuing Ph.D. at NIT Rourkela under the MeitY-sponsored C2S SMDP program, focusing on 
+                <strong>Trusted Platform Module (TPM) design for securing Industrial IoT Gateways</strong>. 
+                Expert in integrating complex cryptographic algorithms and security protocols into high-performance silicon systems. 
+                Specialized in <strong>RTL-to-GDSII flow</strong> and hardware-based root of trust. 
+                Adept at explaining complex engineering and cryptographic concepts to both professional and non-professional audiences.
             </p>
         </div>
     </section>
 
-    <section id="research" style="background: white;">
+    <section id="experience" style="background: white;">
         <div class="container">
-            <div class="section-header"><h2>Current Research Frontiers</h2></div>
-            <div class="grid">
-                <div class="card">
-                    <h3>PQC & Lightweight Crypto</h3>
-                    <p>Focusing on <strong>Post-Quantum Cryptography (PQC)</strong> to future-proof hardware against quantum threats, alongside lightweight implementations of <strong>ASCON</strong> for edge device security.</p>
-                </div>
-                <div class="card">
-                    <h3>ASIC Design of RISC-V</h3>
-                    <p>Designing secure, customized <strong>RISC-V</strong> processor cores with specialized cryptographic instructions for trusted industrial execution environments.</p>
-                </div>
-                <div class="card">
-                    <h3>Image & Data Security</h3>
-                    <p>Researching secure hardware architectures for real-time <strong>image encryption</strong> and data protection in high-stakes Industrial IoT (IIoT) sensors.</p>
-                </div>
+            <div class="section-header"><h2>Work Experience</h2></div>
+            
+            <div class="timeline-item">
+                <h4>Ph.D. Research Scholar</h4>
+                <p class="timeline-meta">National Institute of Technology Rourkela | 2023 - Present</p>
+                <p style="color: var(--text-light);">
+                    Working on the design and development of Trusted Platform Module (TPM) for securing Industrial IoT Gateways. 
+                    Focus areas include cryptographic hardware, secure ASIC design, and interface integration. 
+                    Designed Second FIFO-enabled ASCON Chip for lightweight authenticated encryption.
+                </p>
+                <ul style="margin-top: 10px;">
+                    <li>Leading research in cryptographic hardware design and security protocols</li>
+                    <li>Developing secure ASIC architectures for Industrial IoT applications</li>
+                    <li>Mentoring undergraduate and junior research students</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <h4>Project Assistant</h4>
+                <p class="timeline-meta">Parala Maharaja Engineering College | 2022 - 2023</p>
+                <p style="color: var(--text-light);">
+                    Worked under MeitY-sponsored C2S SMDP program on ASIC design projects using industry-standard EDA tools.
+                </p>
+                <ul style="margin-top: 10px;">
+                    <li>Contributed to ASIC design projects using Cadence, Synopsys, Siemens, and Xilinx tools</li>
+                    <li>Gained hands-on experience in Verilog and TCL scripting</li>
+                    <li>Designed the first energy-efficient approximate multiplier chip in Odisha, showcased at Semicon India</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <section id="mentorship">
+    <section id="skills">
         <div class="container">
-            <div class="section-header"><h2>Mentorship & Academic Leadership</h2></div>
-            <div class="mentorship-banner">
-                <h3>Guiding the Next Generation</h3>
-                <p>I actively supervise undergraduate and junior research students, providing hands-on training in industry-standard EDA tools and design methodologies.</p>
-                <div class="student-list">
-                    <div class="student-item">
-                        <strong>Image Security Team</strong>
-                        Mentoring students in developing ASIC modules for high-speed image data encryption.
-                    </div>
-                    <div class="student-item">
-                        <strong>FPGA Prototyping Group</strong>
-                        Directing student implementation of digital ICs on Xilinx Artix-7 and PYNQ-Z2 platforms.
-                    </div>
-                    <div class="student-item">
-                        <strong>Analog Layout Design</strong>
-                        Guiding junior scholars through SCL 180nm PDK design for Op-Amps and SRAM cells.
-                    </div>
+            <div class="section-header"><h2>Technical Skills & Expertise</h2></div>
+            
+            <div class="skill-category">
+                <h3>Core Competencies</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Cryptography & Security</span>
+                    <span class="skill-tag">RTL Coding & Digital Design</span>
+                    <span class="skill-tag">Analog Layout Design</span>
+                    <span class="skill-tag">FPGA Programming</span>
+                    <span class="skill-tag">ASIC Design Flow</span>
+                    <span class="skill-tag">Verification & Validation</span>
+                    <span class="skill-tag">Static Timing Analysis</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>Programming & Scripting Languages</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Verilog HDL</span>
+                    <span class="skill-tag">TCL Scripting</span>
+                    <span class="skill-tag">MATLAB</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">VHDL</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>EDA Tools & Technologies</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Cadence Innovus</span>
+                    <span class="skill-tag">Cadence Virtuoso</span>
+                    <span class="skill-tag">Conformal</span>
+                    <span class="skill-tag">Xcelium</span>
+                    <span class="skill-tag">Calibre</span>
+                    <span class="skill-tag">Synopsys VCS</span>
+                    <span class="skill-tag">Synopsys Verdi</span>
+                    <span class="skill-tag">Design Compiler</span>
+                    <span class="skill-tag">IC Compiler</span>
+                    <span class="skill-tag">Xilinx Vivado</span>
+                    <span class="skill-tag">Ansys HFSS</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>Technology Nodes & Platforms</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">SCL 180nm</span>
+                    <span class="skill-tag">TSMC 45nm</span>
+                    <span class="skill-tag">TSMC 90nm</span>
+                    <span class="skill-tag">TSMC 180nm</span>
+                    <span class="skill-tag">Xilinx Artix-7</span>
+                    <span class="skill-tag">PYNQ-Z2 FPGA</span>
+                    <span class="skill-tag">Basys-3 FPGA</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>Cryptographic Algorithms & Protocols</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">ASCON Authenticated Encryption</span>
+                    <span class="skill-tag">Lightweight Cryptography</span>
+                    <span class="skill-tag">Post-Quantum Cryptography</span>
+                    <span class="skill-tag">Key Derivation Functions</span>
+                    <span class="skill-tag">TPM Architecture</span>
                 </div>
             </div>
         </div>
@@ -189,26 +269,172 @@
             <div class="section-header"><h2>Major Technical Projects</h2></div>
             <div class="grid">
                 <div class="card">
-                    <h3>Energy-Efficient Multiplier</h3>
-                    <p>Proposed and designed a novel approximate multiplier chip—one of only three ICs developed in Odisha showcased at <strong>Semicon India 2025</strong>.</p>
+                    <h3>Energy-Efficient Approximate Multiplier ASIC</h3>
+                    <p>Designed and fabricated an innovative approximate multiplier chip using SCL 180nm technology.</p>
                     <ul>
-                        <li>Proposed approximate compressor & full adder.</li>
-                        <li>Reduced power, delay, and area overhead.</li>
-                        <li>Fabricated at SCL Chandigarh (180nm).</li>
+                        <li>Proposed novel approximate compressor and full adder architectures</li>
+                        <li>Reduced area, power, delay, and transistor count while maintaining low error rates</li>
+                        <li>One of only three ICs developed in Odisha, showcased at Semicon India 2025</li>
+                        <li>Fabricated at SCL Chandigarh</li>
+                        <li>Future work includes integration into CNN architectures</li>
                     </ul>
                 </div>
                 <div class="card">
-                    <h3>FIFO-enabled ASCON ASIC</h3>
-                    <p>Designed a custom ASIC for ASCON authenticated encryption with a robust FIFO interface for secure data flow.</p>
+                    <h3>FIFO-enabled ASCON ASIC Module</h3>
+                    <p>Implemented ASCON lightweight authenticated encryption algorithm with FIFO interface.</p>
                     <ul>
-                        <li>Pipelined architecture for high throughput.</li>
-                        <li>RTL design, Logic Synthesis, & Physical Design.</li>
-                        <li>Fabricated using SCL 180nm technology.</li>
+                        <li>Designed using SCL 180nm technology</li>
+                        <li>Integrated FIFO interface for secure data exchange</li>
+                        <li>Performed physical verification using Calibre</li>
+                        <li>Focused on low power, area efficiency, and timing optimization</li>
+                        <li>Sent for fabrication at SCL Chandigarh</li>
                     </ul>
                 </div>
                 <div class="card">
-                    <h3>Trusted Platform Module (TPM)</h3>
-                    <p>Lead designer for a dedicated TPM architecture intended for securing Industrial IoT Gateways, focusing on secure boot and identity management.</p>
+                    <h3>Trusted Platform Module (TPM) for IIoT</h3>
+                    <p>Ph.D. research project focusing on secure hardware for Industrial IoT Gateways.</p>
+                    <ul>
+                        <li>Designing dedicated TPM architecture for Industrial IoT security</li>
+                        <li>Focus on cryptographic hardware and secure ASIC design</li>
+                        <li>Interface integration for secure data transmission</li>
+                        <li>Developing hardware root of trust mechanisms</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>UP-COUNTER ASIC with 1Hz Clock</h3>
+                    <p>Implemented a simple up-counter with clock divider from 100MHz to 1Hz.</p>
+                    <ul>
+                        <li>Complete RTL to GDS-II implementation</li>
+                        <li>SCL 180nm technology node</li>
+                        <li>Calculated area, power, delay, and transistor count parameters</li>
+                        <li>Physical verification using Calibre</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Face Detection using PYNQ-Z2 FPGA</h3>
+                    <p>Implemented MTCNN face detection algorithm on FPGA platform.</p>
+                    <ul>
+                        <li>Wrote MTCNN Python code for face detection</li>
+                        <li>Implemented on PYNQ-Z2 using Jupyter environment</li>
+                        <li>Real-time face detection on FPGA hardware</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Microstrip Patch Antenna Design</h3>
+                    <p>Designed U-Slot rectangular microstrip patch antennas for Wi-Fi applications.</p>
+                    <ul>
+                        <li>Used Ansys HFSS for antenna design and simulation</li>
+                        <li>Analyzed S-parameters, VSWR, bandwidth, gain, directivity</li>
+                        <li>Compared FR4 and RT/Duroid substrates</li>
+                        <li>U-slot design demonstrated superior performance</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="research">
+        <div class="container">
+            <div class="section-header"><h2>Research & Publications</h2></div>
+            
+            <div class="card" style="margin-bottom: 30px;">
+                <h3>Current Research Focus</h3>
+                <p>My research spans multiple frontiers in hardware security and VLSI design:</p>
+                <ul>
+                    <li><strong>PQC & Lightweight Crypto:</strong> Post-Quantum Cryptography (PQC) implementations and lightweight ASCON for edge device security</li>
+                    <li><strong>ASIC Design of RISC-V:</strong> Secure, customized RISC-V processor cores with cryptographic instructions</li>
+                    <li><strong>Image & Data Security:</strong> Hardware architectures for real-time image encryption in Industrial IoT sensors</li>
+                    <li><strong>TPM Architecture:</strong> Hardware-based root of trust for Industrial IoT Gateway security</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Publications & Conference Papers</h3>
+                <div class="timeline-item">
+                    <h4>High-Efficiency FPGA Implementations of ASCON-128/128A</h4>
+                    <p class="timeline-meta">11th IEEE iSES Conference | Accepted | First Author</p>
+                    <p>A unified pipelined architecture for authenticated encryption in edge devices.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>ASIC Implementation of KDF-based ASCON AEAD Optimized Cryptographic Pipelined Accelerator</h4>
+                    <p class="timeline-meta">39th VLSID 2026 Conference | Under Review | First Author</p>
+                    <p>Optimized hardware accelerator for authenticated encryption with associated data.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Rectangular Microstrip Patch Antenna for Wi-Fi Applications</h4>
+                    <p class="timeline-meta">Kronika Journal | Co-author</p>
+                    <p>Design and analysis using FR4 and RT/Duroid substrates at 2.4-2.483 GHz.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Design and Analysis of Energy-Efficient Approximate Multiplier</h4>
+                    <p class="timeline-meta">MNDCS Conference | Co-author</p>
+                    <p>Comprehensive analysis of approximate computing techniques for multiplier design.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" style="background: white;">
+        <div class="container">
+            <div class="section-header"><h2>Education & Qualifications</h2></div>
+            
+            <div class="grid">
+                <div class="card">
+                    <h3>Ph.D. in Electronics & Communication Engineering</h3>
+                    <p class="timeline-meta">National Institute of Technology Rourkela | 2023 - Present</p>
+                    <p><strong>Research:</strong> Design and Development of TPM for securing Industrial IoT Gateway</p>
+                    <p><strong>Program:</strong> C2S SMDP (Special Manpower Development Program)</p>
+                    <p><strong>Sponsor:</strong> Ministry of Electronics and Information Technology (MeitY)</p>
+                </div>
+                
+                <div class="card">
+                    <h3>Bachelor of Technology in Electronics & Telecommunications</h3>
+                    <p class="timeline-meta">Parala Maharaja Engineering College | 2019 - 2023</p>
+                    <p><strong>CGPA:</strong> 8.61/10.0</p>
+                    <p><strong>Specialization:</strong> VLSI Design, Digital Electronics, Communication Systems</p>
+                </div>
+                
+                <div class="card">
+                    <h3>Intermediate in Science</h3>
+                    <p class="timeline-meta">Aska Science College | 2017 - 2019</p>
+                    <p><strong>Percentage:</strong> 63.4%</p>
+                    <p>Physics, Chemistry, Mathematics, Computer Science</p>
+                </div>
+                
+                <div class="card">
+                    <h3>Matriculation</h3>
+                    <p class="timeline-meta">SLN High School | 2016 - 2017</p>
+                    <p><strong>Percentage:</strong> 74%</p>
+                </div>
+            </div>
+            
+            <div style="margin-top: 50px;">
+                <h3 style="color: var(--primary); margin-bottom: 20px;">Certifications & Training</h3>
+                <div class="grid">
+                    <div class="card">
+                        <h4>SEMICON India 2025</h4>
+                        <p>Attended chip handover ceremony for designed IC chip. Chip showcased at Semicon India 2025 as one of three ICs developed in Odisha.</p>
+                    </div>
+                    <div class="card">
+                        <h4>9th IEEE International Test Conference India 2025</h4>
+                        <p>Selected as Student Fellow for this prestigious conference.</p>
+                    </div>
+                    <div class="card">
+                        <h4>IEP on ASIC Analog Design using SCL 180nm PDK</h4>
+                        <p>ChipIN Centre, CDAC Bangalore. Learned Opamp design using SCL180 PDK with Cadence Virtuoso.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Design and ASIC Implementation of 2x2 SRAM</h4>
+                        <p>IEP at IIT Indore. Learned SRAM design using SCL180 PDK with Cadence Virtuoso.</p>
+                    </div>
+                    <div class="card">
+                        <h4>28th IEEE International Symposium on VLSI Design and Test</h4>
+                        <p>VDAT-2024 Student Fellow.</p>
+                    </div>
+                    <div class="card">
+                        <h4>37th International Conference of VLSI Design</h4>
+                        <p>VLSID 2024 Delegate. Attended as part of 23rd International Conference of Embedded System Design.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -216,26 +442,55 @@
 
     <section id="achievements">
         <div class="container">
-            <div class="section-header"><h2>Key Milestones</h2></div>
-            <div class="achievement-row">
-                <div class="badge">IEEE</div>
-                <div class="achieve-content">
-                    <strong>International Symposium on Smart Electronic Systems (ISES)</strong>
-                    <p>Accepted: "High-Efficiency FPGA Implementations of ASCON-128/128A: A Unified Pipelined Architecture."</p>
+            <div class="section-header"><h2>Achievements & Recognition</h2></div>
+            
+            <div class="grid">
+                <div class="card">
+                    <h3>Tape-Out Success</h3>
+                    <p>Successfully fabricated one chip at SCL Chandigarh, with another currently under development.</p>
+                </div>
+                
+                <div class="card">
+                    <h3>GATE 2024 Excellence</h3>
+                    <p>Secured All India Rank (AIR) 7458 with a score of 365 in Electronics & Communication Engineering.</p>
+                </div>
+                
+                <div class="card">
+                    <h3>Semicon India 2025 Showcase</h3>
+                    <p>Designed IC chip was one of only three developed in Odisha and showcased at Semicon India 2025.</p>
+                </div>
+                
+                <div class="card">
+                    <h3>Conference Fellowships</h3>
+                    <p>Selected as Student Fellow for multiple IEEE conferences including ITC India 2025 and VDAT-2024.</p>
                 </div>
             </div>
-            <div class="achievement-row">
-                <div class="badge">Fellow</div>
-                <div class="achieve-content">
-                    <strong>IEEE ITC India 2025 Student Fellow</strong>
-                    <p>Selected as a student fellow for the 9th IEEE International Test Conference India.</p>
-                </div>
-            </div>
-            <div class="achievement-row">
-                <div class="badge">SCL</div>
-                <div class="achieve-content">
-                    <strong>Tape-Out Success</strong>
-                    <p>Successfully fabricated one chip with SCL Chandigarh; currently developing the second IC generation.</p>
+        </div>
+    </section>
+
+    <section id="mentorship" style="background: white;">
+        <div class="container">
+            <div class="section-header"><h2>Mentorship & Academic Leadership</h2></div>
+            <div class="mentorship-banner">
+                <h3>Guiding the Next Generation of VLSI Engineers</h3>
+                <p>I actively supervise undergraduate and junior research students, providing hands-on training in industry-standard EDA tools and design methodologies.</p>
+                <div class="student-list">
+                    <div class="student-item">
+                        <strong>Image Security Team</strong>
+                        Mentoring students in developing ASIC modules for high-speed image data encryption and secure hardware architectures.
+                    </div>
+                    <div class="student-item">
+                        <strong>FPGA Prototyping Group</strong>
+                        Directing student implementation of digital ICs on Xilinx Artix-7 and PYNQ-Z2 platforms for rapid prototyping.
+                    </div>
+                    <div class="student-item">
+                        <strong>Analog Layout Design Team</strong>
+                        Guiding junior scholars through SCL 180nm PDK design for Op-Amps, SRAM cells, and mixed-signal circuits.
+                    </div>
+                    <div class="student-item">
+                        <strong>Cryptographic Hardware Group</strong>
+                        Supervising students in implementing lightweight cryptographic algorithms on FPGA and ASIC platforms.
+                    </div>
                 </div>
             </div>
         </div>
@@ -243,24 +498,52 @@
 
     <section id="contact" style="background: #f1f5f9;">
         <div class="container" style="text-align: center;">
-            <div class="section-header"><h2>Get In Touch</h2></div>
-            <p style="font-size: 1.5rem; font-weight: 700; margin-bottom: 20px;">
-                <a href="mailto:er.pkmohanty2022@gmail.com" style="color: var(--accent); text-decoration: none;">er.pkmohanty2022@gmail.com</a>
-            </p>
-            <p>Rourkela, Odisha, India | +91 9668147292</p>
-            <div class="social-links" style="margin-top: 40px;">
-                <a href="https://linkedin.com/in/er-pradeep">LINKEDIN</a>
-                <a href="https://github.com/erpkmohanty">GITHUB</a>
-                <a href="https://youtube.com/@erpkmohanty">YOUTUBE</a>
+            <div class="section-header"><h2>Contact Information</h2></div>
+            
+            <div class="grid" style="max-width: 800px; margin: 0 auto;">
+                <div class="card" style="text-align: left;">
+                    <h3>Personal Details</h3>
+                    <p><strong>Address:</strong> Rourkela, Odisha, 769008</p>
+                    <p><strong>Date of Birth:</strong> 28 January 2002</p>
+                    <p><strong>Nationality:</strong> Indian</p>
+                    <p><strong>Languages:</strong> Odia (Native), English (Fluent), Hindi (Fluent)</p>
+                    <p><strong>Hobbies:</strong> Playing Cricket, Technology Research, Hardware Prototyping</p>
+                </div>
+                
+                <div class="card" style="text-align: left;">
+                    <h3>Professional Contact</h3>
+                    <p><strong>Email:</strong> <a href="mailto:er.pkmohanty2022@gmail.com" style="color: var(--accent);">er.pkmohanty2022@gmail.com</a></p>
+                    <p><strong>Phone:</strong> +91 9668147292</p>
+                    <p><strong>Location:</strong> Rourkela, Odisha, India</p>
+                    
+                    <div style="margin-top: 20px;">
+                        <h4>Connect with me:</h4>
+                        <div class="social-links" style="margin-top: 15px;">
+                            <a href="https://linkedin.com/in/er-pradeep">LinkedIn</a>
+                            <a href="https://github.com/erpkmohanty">GitHub</a>
+                            <a href="https://youtube.com/@erpkmohanty">YouTube</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="margin-top: 50px; padding: 30px; border-top: 1px solid var(--border);">
+                <h3>Declaration</h3>
+                <p style="font-style: italic; color: var(--text-light); max-width: 800px; margin: 0 auto;">
+                    I hereby declare that all the information provided above is true to the best of my knowledge and belief.
+                </p>
+                <p style="margin-top: 20px; font-weight: 600;">Pradeep Kumar Mohanty</p>
             </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <div class="footer-logo">P.K. MOHANTY</div>
-            <p>© 2026 Er. Pradeep Kumar Mohanty. All rights reserved.</p>
-            <p style="font-size: 0.75rem; margin-top: 10px;">PhD Scholar @ NIT Rourkela | VLSI Research Lead</p>
+            <div class="footer-logo">Er. Pradeep Kumar Mohanty</div>
+            <p>Ph.D. Research Scholar | VLSI Design Engineer | Hardware Security Specialist</p>
+            <p>National Institute of Technology Rourkela | C2S SMDP Program</p>
+            <p style="margin-top: 20px;">© 2026 Er. Pradeep Kumar Mohanty. All rights reserved.</p>
+            <p style="font-size: 0.75rem; margin-top: 10px;">Last Updated: February 2026</p>
         </div>
     </footer>
 
