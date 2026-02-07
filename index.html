@@ -15,7 +15,7 @@ body {
   color: #222;
 }
 
-/* STICKY NAV */
+/* STICKY NAVBAR */
 nav {
   position: sticky;
   top: 0;
@@ -48,7 +48,7 @@ nav a:hover {
 
 .hero h1 {
   font-size: 3em;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   font-weight: 500;
 }
 
@@ -59,48 +59,45 @@ nav a:hover {
 
 /* MAIN */
 main {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: auto;
   background: white;
+  padding: 50px;
 }
 
-/* SECTIONS */
-section {
-  padding: 70px 60px;
+/* ACCORDION */
+details {
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 15px 20px;
+  background: #fafafa;
 }
 
-section h2 {
+summary {
+  font-size: 1.3em;
+  font-weight: 600;
   color: #1f1f3d;
-  font-size: 1.8em;
-  border-bottom: 3px solid #e6dccb;
-  display: inline-block;
-  padding-bottom: 6px;
-  margin-bottom: 25px;
+  cursor: pointer;
+  list-style: none;
 }
 
-/* ABOUT */
-.about {
-  display: flex;
-  gap: 50px;
-  align-items: center;
+summary::-webkit-details-marker {
+  display: none;
 }
 
-.about img {
-  width: 260px;
-  box-shadow: 0 8px 20px rgba(0,0,0,.2);
+details[open] {
+  background: #ffffff;
+  border-left: 5px solid #1f1f3d;
 }
 
-.about p {
-  line-height: 1.8;
+/* CONTENT */
+section p, section li {
+  line-height: 1.7;
 }
 
-/* LISTS */
 ul {
-  padding-left: 22px;
-}
-
-li {
-  margin-bottom: 10px;
+  padding-left: 20px;
 }
 
 /* FOOTER */
@@ -110,15 +107,6 @@ footer {
   text-align: center;
   padding: 25px;
   font-size: 0.9em;
-}
-
-/* RESPONSIVE */
-@media(max-width: 900px) {
-  section { padding: 50px 25px; }
-  .about {
-    flex-direction: column;
-    text-align: center;
-  }
 }
 </style>
 </head>
@@ -149,96 +137,96 @@ footer {
 <main>
 
 <!-- ABOUT -->
-<section id="about">
-  <h2>About Me</h2>
-  <div class="about">
-    <img src="photo.jpg" alt="Pradeep Kumar Mohanty">
-    <p>
-      I am a Ph.D. Research Scholar at the National Institute of Technology,
-      Rourkela under the Chips-to-Startup (C2S) program. My research focuses on
-      the design and development of Trusted Platform Modules (TPM) for securing
-      Industrial IoT Gateways. My interests include cryptographic hardware,
-      secure ASIC design, and FPGA implementations.
-      <br><br>
-      <strong>Email:</strong> er.pkmohanty2022@gmail.com<br>
-      <strong>Location:</strong> Rourkela, Odisha, India
-    </p>
-  </div>
-</section>
+<details id="about" open>
+  <summary>About Me</summary>
+  <p>
+    I am a Ph.D. Research Scholar at NIT Rourkela under the C2S program.
+    My research focuses on Trusted Platform Modules (TPM) for securing
+    Industrial IoT Gateways, cryptographic hardware, secure ASIC design,
+    and FPGA implementations.
+  </p>
+</details>
 
 <!-- EDUCATION -->
-<section id="education">
-  <h2>Education</h2>
+<details id="education">
+  <summary>Education</summary>
   <ul>
-    <li><strong>Ph.D. (Pursuing)</strong>, NIT Rourkela – Secure TPM for Industrial IoT</li>
-    <li><strong>B.Tech</strong>, Electronics & Telecommunication, PMEC Berhampur (CGPA: 8.61)</li>
-    <li>Intermediate in Science – Aska Science College</li>
+    <li>Ph.D. (Pursuing), NIT Rourkela</li>
+    <li>B.Tech, Electronics & Telecommunication, PMEC Berhampur (CGPA: 8.61)</li>
+    <li>Intermediate, Aska Science College</li>
   </ul>
-</section>
+</details>
 
 <!-- EXPERIENCE -->
-<section id="experience">
-  <h2>Experience</h2>
+<details id="experience">
+  <summary>Experience</summary>
   <ul>
-    <li>
-      <strong>Ph.D. Research Scholar</strong> (2025–Present)<br>
-      NIT Rourkela – Working on cryptographic hardware and TPM design
-    </li>
-    <li>
-      <strong>Project Assistant</strong> (2023–2024)<br>
-      PMEC Berhampur – ASIC design using Cadence & Synopsys tools
-    </li>
+    <li><strong>Ph.D. Research Scholar</strong>, NIT Rourkela (2025–Present)</li>
+    <li><strong>Project Assistant</strong>, PMEC Berhampur (2023–2024)</li>
   </ul>
-</section>
+</details>
 
 <!-- RESEARCH -->
-<section id="research">
-  <h2>Research Interests</h2>
+<details id="research">
+  <summary>Research Interests</summary>
   <ul>
     <li>Hardware Security & Cryptographic Accelerators</li>
     <li>ASIC and FPGA Design</li>
     <li>Lightweight Cryptography (ASCON)</li>
     <li>Industrial IoT Security & TPM</li>
-    <li>Low-Power VLSI Design</li>
   </ul>
-</section>
+</details>
 
 <!-- PROJECTS -->
-<section id="projects">
-  <h2>Projects</h2>
+<details id="projects">
+  <summary>Projects</summary>
   <ul>
-    <li>ASIC Implementation of FIFO-enabled ASCON Module (SCL 180nm)</li>
-    <li>Energy-Efficient Approximate Multiplier ASIC (Fabricated)</li>
+    <li>FIFO-enabled ASCON ASIC (SCL 180nm)</li>
+    <li>Energy-Efficient Approximate Multiplier (Fabricated)</li>
     <li>Face Detection using PYNQ-Z2 FPGA</li>
-    <li>ASIC Implementation of Up-Counter (RTL to GDS-II)</li>
   </ul>
-</section>
+</details>
 
 <!-- PUBLICATIONS -->
-<section id="publications">
-  <h2>Publications</h2>
+<details id="publications">
+  <summary>Publications</summary>
   <ul>
-    <li>High-Efficiency FPGA Implementations of ASCON-128/128A – IEEE iSES (Accepted)</li>
-    <li>ASIC Implementation of KDF-based ASCON AEAD – VLSID 2026 (Under Review)</li>
-    <li>Energy-Efficient Approximate Multiplier – MNDCS Conference</li>
+    <li>IEEE iSES – ASCON FPGA Implementation</li>
+    <li>VLSID 2026 – ASIC KDF-based ASCON</li>
+    <li>MNDCS – Approximate Multiplier</li>
   </ul>
-</section>
+</details>
 
 <!-- CONTACT -->
-<section id="contact">
-  <h2>Contact</h2>
+<details id="contact">
+  <summary>Contact</summary>
   <p>
-    📧 Email: er.pkmohanty2022@gmail.com<br>
-    📍 Rourkela, Odisha, India<br>
+    📧 er.pkmohanty2022@gmail.com <br>
+    📍 Rourkela, Odisha, India <br>
     🔗 GitHub: https://github.com/Erpradeep2022
   </p>
-</section>
+</details>
 
 </main>
 
 <footer>
   © 2026 Er. Pradeep Kumar Mohanty | Academic Personal Website
 </footer>
+
+<!-- JS: ONLY ONE SECTION OPEN -->
+<script>
+const allDetails = document.querySelectorAll("details");
+
+allDetails.forEach(target => {
+  target.addEventListener("toggle", () => {
+    if (target.open) {
+      allDetails.forEach(other => {
+        if (other !== target) other.removeAttribute("open");
+      });
+    }
+  });
+});
+</script>
 
 </body>
 </html>
